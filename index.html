@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CapSmill - Custom Caps Manufacturer | OEM &amp; ODM Hat Factory</title>
+  <meta name="description" content="CapSmill is a factory-direct custom cap manufacturer in China. OEM &amp; ODM baseball caps, beanies, bucket hats, dad caps, trucker caps, golf caps and more. MOQ 50 pcs, 7-day sampling, 15-day delivery, free digital mockup.">
+  <meta name="keywords" content="custom caps, custom hats, cap manufacturer, OEM caps, ODM hats, baseball cap factory, embroidery caps, trucker caps, beanie manufacturer, cap factory China">
+  <meta name="author" content="CapSmill">
+  <link rel="canonical" href="https://capsmill.com/">
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CapSmill">
+  <meta property="og:title" content="CapSmill - Custom Caps Manufacturer | OEM &amp; ODM Hat Factory">
+  <meta property="og:description" content="Factory-direct custom caps. MOQ 50 pcs | 7-day sampling | 15-day delivery | free digital mockup.">
+  <meta property="og:url" content="https://capsmill.com/">
+  <meta property="og:image" content="https://capsmill.com/assets/img/banner/banner.webp">
+
+  <!-- Favicons (new CapSmill logo) -->
+  <link href="assets/img/logo/logo.png" rel="icon">
+  <link href="assets/img/logo/logo.png" rel="apple-touch-icon">
+
+  <!-- =====================================================================
+       VENDOR CSS - Cloudflare CDN
+       The original template referenced local assets/vendor/ files that are
+       NOT present in this project, so they are replaced with Cloudflare
+       cdnjs links (per project requirement). Google Fonts are removed and a
+       system font stack is used for speed (see custom styles below).
+       ===================================================================== -->
+
+  <!-- Critical CSS: Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Main CSS file: preloaded (critical render path) -->
+  <link href="assets/css/main.css" rel="preload" as="style">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Icon fonts: Bootstrap Icons (primary) + Font Awesome 6 - both loaded
+       normally so every bi-* / fa-* icon renders reliably -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <!-- Deferred non-critical CSS (media="print" + onload switch) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" rel="stylesheet">
+  </noscript>
+
+  <!-- =====================================================================
+       CapSmill custom styles (added on top of the original Mentor template).
+       The template design system (colors, spacing, card styles) is untouched -
+       these rules only support new content and the performance requirements.
+       ===================================================================== -->
+  <style>
+    /* System font stack - replaces Google Fonts to remove external requests */
+    :root {
+      --default-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      --heading-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --nav-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    /* Correct anchor scroll offset for the sticky header */
+    section, .section { scroll-margin-top: 80px; }
+    @media (max-width: 1199px) { section, .section { scroll-margin-top: 66px; } }
+
+    /* Products: uniform square images without distortion (template card look) */
+    .course-item .product-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+    /* ==========================================
+       Logo (CapSmill)
+       logo.png is now a transparent-background PNG
+       (the original white-background file is saved
+       as logo.original-backup.png) so it is used
+       directly - no blend mode required. Aspect
+       ratio stays 1:1 (width auto). No background,
+       radius, padding or shadow is applied.
+       ========================================== */
+    .header .logo img {
+      max-height: 50px;
+      width: auto;
+      height: auto;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      margin-right: 10px;
+    }
+    .footer .footer-about .logo img {
+      max-height: 46px;
+      width: auto;
+      height: auto;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      margin-right: 8px;
+    }
+    @media (max-width: 991px) {
+      /* keep the logo visible on tablets - slightly smaller */
+      .header .logo img { max-height: 44px; }
+    }
+    @media (max-width: 575px) {
+      /* keep the logo visible on phones - slightly smaller */
+      .header .logo img { max-height: 40px; }
+      .header .logo h1 { font-size: 24px; }
+    }
+
+    /* ==========================================
+       Product categories (grouped, no filter)
+       Each category gets a clear centered title,
+       an accent separator line and its own row of
+       product cards.
+       ========================================== */
+    .product-category { margin-top: 55px; text-align: center; }
+    .product-category:first-of-type { margin-top: 5px; }
+    .product-category h3 { font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--heading-color); margin: 0 0 10px 0; }
+    .product-category .cat-sep { width: 64px; height: 3px; border-radius: 3px; background: var(--accent-color); margin: 0 auto 12px auto; }
+    .product-category p { max-width: 680px; margin: 0 auto; color: color-mix(in srgb, var(--default-color), transparent 25%); font-size: 15px; }
+    .product-category + .row { margin-top: 15px; }
+
+    /* How We Work / Factory: member-card look (template scopes .member
+       styles to .trainers-index, so the same rules are mirrored here) */
+    .how-we-work .member,
+    .factory-gallery .member { background-color: var(--surface-color); border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); text-align: center; margin-bottom: 20px; height: 100%; }
+    .how-we-work .member img,
+    .factory-gallery .member img { margin: -1px -1px 30px -1px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .how-we-work .member-content,
+    .factory-gallery .member-content { padding: 0 20px 30px 20px; }
+    .how-we-work .member h4,
+    .factory-gallery .member h4 { font-weight: 700; margin-bottom: 2px; font-size: 18px; }
+    .how-we-work .member p,
+    .factory-gallery .member p { padding-top: 10px; font-size: 14px; font-style: italic; color: color-mix(in srgb, var(--default-color), transparent 40%); margin-bottom: 0; }
+    .step-num { display: block; color: var(--accent-color); font-weight: 700; font-size: 13px; letter-spacing: 2px; margin-bottom: 4px; }
+
+    /* Trust band icons (counts section) */
+    .trust-item i { display: block; font-size: 36px; color: var(--accent-color); margin-bottom: 12px; }
+    .trust-item p { margin-top: 8px; }
+
+    /* Testimonial avatar placeholder (Bootstrap Icons user icon) */
+    .testimonial-avatar { width: 90px; height: 90px; border-radius: 10px; border: 6px solid var(--background-color); background: color-mix(in srgb, var(--accent-color), transparent 90%); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 42px; position: absolute; left: -45px; top: 30px; }
+
+    /* Hero second CTA - outline version of the template hero button */
+    .hero .btn-get-started-outline { font-weight: 500; font-size: 15px; letter-spacing: 1px; display: inline-block; padding: 8px 35px 10px 35px; border-radius: 50px; transition: 0.4s; margin-top: 30px; border: 2px solid var(--default-color); color: var(--default-color); }
+    .hero .btn-get-started-outline:hover { background: var(--default-color); color: var(--accent-color); }
+
+    /* Review evidence screenshots */
+
+
+    /* FAQ accordion: Bootstrap look matched to the template card radius */
+    .faq .accordion-item { border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); border-radius: 5px; margin-bottom: 10px; overflow: hidden; }
+    .faq .accordion-button { font-weight: 600; color: var(--heading-color); }
+    .faq .accordion-button:not(.collapsed) { background: color-mix(in srgb, var(--accent-color), transparent 94%); color: var(--heading-color); box-shadow: none; }
+
+    @media (max-width: 575px) {
+      .hero .btn-get-started,
+      .hero .btn-get-started-outline { display: block; width: 100%; text-align: center; }
+    }
+    /* Products: 4 cards per row on desktop - tighten card padding so the
+       smaller columns still look clean */
+    @media (min-width: 992px) {
+      .courses .course-content { padding: 12px; }
+      .courses .course-content h3 { font-size: 17px; }
+    }
+    /* ==========================================
+       Section titles - centered (original Mentor
+       template look) - fixes "What Our Clients Say".
+       ========================================== */
+    .section-title { text-align: center; }
+
+    /* Customization cards: icon alignment + readable
+       wrapping for long technique names */
+    .features .features-item { min-height: 92px; height: 100%; }
+    .features .features-item i { font-size: 34px; line-height: 1; padding-right: 14px; flex-shrink: 0; }
+    .features .features-item h3 { line-height: 1.35; }
+  </style>
+
+  <!-- ========================================================
+  * Template Name: Mentor (customized for CapSmill)
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Updated: Jul 07 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body class="index-page">
+
+  <!-- ================================
+       HEADER / NAVIGATION
+       Menu: Home | About | Products | How We Work | Factory | Reviews | FAQ | Contact
+       Right side: "Get a Quote" button (links to the contact section).
+       Mobile keeps the original hamburger menu.
+       ================================ -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <!-- Logo: new CapSmill logo image + brand text (same style as template) -->
+      <a href="#hero" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/logo/logo.png" alt="CapSmill logo" width="50" height="50">
+        <h1 class="sitename">CapSmill</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#how-we-work">How We Work</a></li>
+          <li><a href="#factory">Factory</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#contact">Get a Quote</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ================================
+         HERO BANNER
+         Image: assets/img/banner/banner.webp (first banner image).
+         Keeps the original template hero layout, height and overlay.
+         ================================ -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/banner/banner.webp" alt="CapSmill custom caps factory banner" data-aos="fade-in" fetchpriority="high" width="1920" height="1080">
+
+      <div class="container">
+        <h2 data-aos="fade-up" data-aos-delay="100">Custom Headwear,<br>Engineered for Your Brand</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Factory-Direct&nbsp;|&nbsp;MOQ 50 Pcs&nbsp;|&nbsp;7-Day Sampling&nbsp;|&nbsp;15-Day Delivery</p>
+        <div class="d-flex flex-wrap mt-4 gap-3" data-aos="fade-up" data-aos-delay="300">
+          <a href="#products" class="btn-get-started">Explore Our Products</a>
+          <a href="#contact" class="btn-get-started-outline">Get A Free Quote</a>
+        </div>
+      </div>
+    </section><!-- /Hero -->
+
+    <!-- ================================
+         ABOUT CAPSMILL
+         Two columns - factory image on the left, company text on the right,
+         three key points + "Get A Free Quote" button. Template layout kept.
+         ================================ -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/factory/1.webp" class="img-fluid" alt="CapSmill cap factory workshop" loading="lazy" width="800" height="600">
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-2 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Your Trusted Custom Cap Manufacturer in China</h3>
+            <p class="fst-italic">
+              CapSmill is a factory-direct OEM &amp; ODM headwear manufacturer based in Baoding, Hebei, China. We design and produce custom baseball caps, beanies, bucket hats, trucker caps, dad caps, golf caps, snapbacks and visors for brands worldwide.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>15+ years of OEM &amp; ODM cap manufacturing with full in-house production lines.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Every cap customizable - embroidery, 3D puff, screen &amp; heat printing, patches, labels and custom packaging.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Low MOQ of 50 pieces, 7-day sampling and 15-day delivery to help you launch fast.</span></li>
+            </ul>
+            <a href="#contact" class="read-more"><span>Get A Free Quote</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /About -->
+
+    <!-- ================================
+         TRUST BAND (counts)
+         Alibaba Trade Assurance | SGS Inspected Factory | 50M+ Caps Produced |
+         DHL/FedEx/UPS | 15-Day Delivery. Keeps the template counts styling.
+         ================================ -->
+    <section id="trust" class="section counts light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-6 col-lg">
+            <div class="stats-item trust-item text-center w-100 h-100">
+              <i class="bi bi-patch-check-fill"></i>
+              <p>Alibaba Trade Assurance</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg">
+            <div class="stats-item trust-item text-center w-100 h-100">
+              <i class="bi bi-award"></i>
+              <p>SGS Inspected Factory</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg">
+            <div class="stats-item trust-item text-center w-100 h-100">
+              <i class="bi bi-box-seam"></i>
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <p>M+ Caps Produced</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg">
+            <div class="stats-item trust-item text-center w-100 h-100">
+              <i class="bi bi-truck"></i>
+              <p>DHL / FedEx / UPS</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg">
+            <div class="stats-item trust-item text-center w-100 h-100">
+              <i class="bi bi-clock-history"></i>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Day Delivery</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Trust Band -->
+    <!-- ================================
+         WHY CHOOSE CAPSMILL (service highlights)
+         Original template Why-Us layout: green highlight box + 3 icon cards.
+         Content replaced with: Factory-Direct | MOQ 50 Pcs | Free Digital Mockup.
+         ================================ -->
+    <section id="why-us" class="section why-us">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>Why Choose CapSmill?</h3>
+              <p>
+                Factory-direct OEM &amp; ODM custom headwear. From a 50-piece pilot run to 100,000-cap programs, we deliver consistent quality, on-time shipping and complete customization - embroidery, printing, patches, labels and packaging - all under one roof.
+              </p>
+              <div class="text-center">
+                <a href="#contact" class="more-btn"><span>Get A Free Quote</span> <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-factory"></i>
+                  <h4>Factory-Direct</h4>
+                  <p>Deal directly with our production team - no middlemen, better prices and full control over every order.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-box-seam"></i>
+                  <h4>MOQ 50 Pcs</h4>
+                  <p>Start small and scale up. Low minimums make custom caps accessible for startups and big brands alike.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-palette"></i>
+                  <h4>Free Digital Mockup</h4>
+                  <p>See your logo on any cap style with a free, realistic digital mockup before you commit to sampling.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Why Us -->
+    <!-- ================================
+         CUSTOMIZATION & DECORATION
+         Original template Features grid (icon cards) repurposed for cap
+         decoration techniques. 8 techniques, template proportions kept.
+         ================================ -->
+        <section id="customization" class="section features light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Customization</h2>
+        <p>Decoration Techniques We Offer</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <i class="bi bi-brush" style="color: #5fcf80;"></i>
+              <h3><a href="#contact" class="stretched-link">Embroidery &amp; 3D Puff</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <i class="bi bi-fire" style="color: #5fcf80;"></i>
+              <h3><a href="#contact" class="stretched-link">Screen &amp; Heat Printing</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <i class="bi bi-award" style="color: #5fcf80;"></i>
+              <h3><a href="#contact" class="stretched-link">PVC &amp; Metal Patches</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item">
+              <i class="bi bi-tags" style="color: #5fcf80;"></i>
+              <h3><a href="#contact" class="stretched-link">Woven &amp; Leather Labels</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item">
+              <i class="bi bi-lightning-charge" style="color: #5fcf80;"></i>
+              <h3><a href="#contact" class="stretched-link">Laser Etching</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="features-item">
+              <i class="bi bi-vector-pen" style="color: #5fcf80;"></i>
+              <h3><a href="#contact" class="stretched-link">Chain Stitch</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="features-item">
+              <i class="bi bi-palette" style="color: #5fcf80;"></i>
+              <h3><a href="#contact" class="stretched-link">Full Sublimation</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="features-item">
+              <i class="bi bi-box-seam" style="color: #5fcf80;"></i>
+              <h3><a href="#contact" class="stretched-link">Custom Tags &amp; Packaging</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+        </div>
+      </div>
+    </section><!-- /Customization -->
+
+    <!-- ================================
+         PRODUCTS
+         The template "Courses" grid is reused for the cap catalog. Products
+         are grouped by category (one block per product folder, in a logical
+         order) - no filter buttons. Each group has a clear title, an accent
+         separator and 4 product cards built from the first 4 photos of the
+         folder. Images are lazy-loaded and cropped to the template square
+         card look.
+         ================================ -->
+    <section id="products" class="section courses">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Products</h2>
+        <p>Our Cap Collection</p>
+      </div>
+
+      <div class="container">
+      <!-- ========== Category: Baseball Caps ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Baseball Caps</h3>
+        <div class="cat-sep"></div>
+        <p>Classic 6-panel baseball caps with structured crowns, curved brims and adjustable closures - the everyday bestseller for brands.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Baseball%20Cap/1.jpg" class="img-fluid product-img" alt="Baseball Caps" loading="lazy" width="1400" height="1400">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Baseball Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Baseball Caps</a></h3>
+                <p class="description">Classic 6-panel structured crown, pre-curved brim, adjustable closure.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Baseball%20Cap/2.jpg" class="img-fluid product-img" alt="Baseball Caps" loading="lazy" width="1400" height="1400">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Baseball Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Baseball Caps</a></h3>
+                <p class="description">High-density 3D puff embroidery on brushed cotton twill.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Baseball%20Cap/3.jpg" class="img-fluid product-img" alt="Baseball Caps" loading="lazy" width="1400" height="1400">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Baseball Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Baseball Caps</a></h3>
+                <p class="description">Moisture-wicking performance fabric with breathable eyelets.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Baseball%20Cap/4.jpg" class="img-fluid product-img" alt="Baseball Caps" loading="lazy" width="1400" height="1400">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Baseball Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Baseball Caps</a></h3>
+                <p class="description">Garment-washed vintage look with tonal stitching.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: 5-Panel Hats ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>5-Panel Hats</h3>
+        <div class="cat-sep"></div>
+        <p>Retro five-panel silhouettes with flat brims and low-profile fits - a streetwear and outdoor brand favorite.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/5panel%20hat/IMG_0240.JPG" class="img-fluid product-img" alt="5-Panel Hats" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">5-Panel Hats</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">5-Panel Hats</a></h3>
+                <p class="description">Five-panel crown with flat brim, cotton twill, embroidered front.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/5panel%20hat/IMG_0241.JPG" class="img-fluid product-img" alt="5-Panel Hats" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">5-Panel Hats</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">5-Panel Hats</a></h3>
+                <p class="description">Unstructured camp fit with adjustable strap and printed graphics.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/5panel%20hat/IMG_0242.JPG" class="img-fluid product-img" alt="5-Panel Hats" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">5-Panel Hats</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">5-Panel Hats</a></h3>
+                <p class="description">Slightly structured crown with snapback closure for streetwear.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/5panel%20hat/IMG_0243.JPG" class="img-fluid product-img" alt="5-Panel Hats" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">5-Panel Hats</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">5-Panel Hats</a></h3>
+                <p class="description">Low-profile fit with custom woven label, 100% cotton.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: Bucket Hats ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Bucket Hats</h3>
+        <div class="cat-sep"></div>
+        <p>Cotton canvas and nylon bucket hats - from classic stitched brims to bold tie-dye panels.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Bucket%20Hat/IMG_0154.JPG" class="img-fluid product-img" alt="Bucket Hats" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Bucket Hats</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Bucket Hats</a></h3>
+                <p class="description">Cotton canvas bucket with stitched brim and embroidered logo.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Bucket%20Hat/IMG_0155.JPG" class="img-fluid product-img" alt="Bucket Hats" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Bucket Hats</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Bucket Hats</a></h3>
+                <p class="description">Custom-dyed panels in bold seasonal colors.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Bucket%20Hat/IMG_0156.JPG" class="img-fluid product-img" alt="Bucket Hats" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Bucket Hats</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Bucket Hats</a></h3>
+                <p class="description">Lightweight water-repellent nylon that packs flat.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Bucket%20Hat/IMG_0160.JPG" class="img-fluid product-img" alt="Bucket Hats" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Bucket Hats</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Bucket Hats</a></h3>
+                <p class="description">Structured bucket with 3D puff front embroidery.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: Dance Caps (Snapback) ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Dance Caps (Snapback)</h3>
+        <div class="cat-sep"></div>
+        <p>High-profile snapbacks with flat brims - built for dance crews, streetwear and stage looks.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Dance%20Cap%20(Snapback)/IMG_0294.JPG" class="img-fluid product-img" alt="Dance Caps Snapback" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Dance Caps (Snapback)</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Dance Caps (Snapback)</a></h3>
+                <p class="description">High-profile flat brim snapback with crisp structure.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Dance%20Cap%20(Snapback)/IMG_0295.JPG" class="img-fluid product-img" alt="Dance Caps Snapback" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Dance Caps (Snapback)</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Dance Caps (Snapback)</a></h3>
+                <p class="description">Extra-deep fit for dance crews with bold embroidery.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Dance%20Cap%20(Snapback)/IMG_0296.JPG" class="img-fluid product-img" alt="Dance Caps Snapback" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Dance Caps (Snapback)</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Dance Caps (Snapback)</a></h3>
+                <p class="description">Flat brim, 6-panel build, satin under-brim option.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Dance%20Cap%20(Snapback)/IMG_0297.JPG" class="img-fluid product-img" alt="Dance Caps Snapback" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Dance Caps (Snapback)</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Dance Caps (Snapback)</a></h3>
+                <p class="description">Foam front with mesh back for airflow on stage.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: Dad Caps ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Dad Caps</h3>
+        <div class="cat-sep"></div>
+        <p>Unstructured, relaxed-fit caps with curved brims and vintage washed styling.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/dad%20cap/10.jpg" class="img-fluid product-img" alt="Dad Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Dad Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Dad Caps</a></h3>
+                <p class="description">Unstructured low-profile fit with curved brim.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/dad%20cap/11.jpg" class="img-fluid product-img" alt="Dad Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Dad Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Dad Caps</a></h3>
+                <p class="description">Soft garment-washed twill with antique brass buckle.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/dad%20cap/12.jpg" class="img-fluid product-img" alt="Dad Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Dad Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Dad Caps</a></h3>
+                <p class="description">Tonal embroidery on cotton-blend, adjustable strap.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/dad%20cap/13.jpg" class="img-fluid product-img" alt="Dad Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Dad Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Dad Caps</a></h3>
+                <p class="description">Minimal streetwear fit with custom front patch.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: Flat Brim Caps ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Flat Brim Caps</h3>
+        <div class="cat-sep"></div>
+        <p>Structured flat-brim caps with snap or fitted closures for a clean urban look.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Flat%20Brim%20Cap/hytgjk%20(1).jpg" class="img-fluid product-img" alt="Flat Brim Caps" loading="lazy" width="1984" height="1984">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Flat Brim Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Flat Brim Caps</a></h3>
+                <p class="description">Structured flat brim cap with snap or fitted closure.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Flat%20Brim%20Cap/hytgjk%20(2).jpg" class="img-fluid product-img" alt="Flat Brim Caps" loading="lazy" width="1984" height="1984">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Flat Brim Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Flat Brim Caps</a></h3>
+                <p class="description">Raised 3D embroidery on premium wool blend.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Flat%20Brim%20Cap/hytgjk%20(3).jpg" class="img-fluid product-img" alt="Flat Brim Caps" loading="lazy" width="1984" height="1984">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Flat Brim Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Flat Brim Caps</a></h3>
+                <p class="description">Flat brim with satin lining for a luxury finish.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Flat%20Brim%20Cap/hytgjk%20(4).jpg" class="img-fluid product-img" alt="Flat Brim Caps" loading="lazy" width="1984" height="1984">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Flat Brim Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Flat Brim Caps</a></h3>
+                <p class="description">Custom printed panels, ready for bold graphics.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: Golf Caps ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Golf Caps</h3>
+        <div class="cat-sep"></div>
+        <p>Laser-perforated and performance golf caps engineered for maximum breathability on the course.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Golf%20Cap%20(Laser%20Perforated)/IMG_5969.JPG" class="img-fluid product-img" alt="Golf Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Golf Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Golf Caps</a></h3>
+                <p class="description">Laser-cut holes for maximum breathability on the course.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Golf%20Cap%20(Laser%20Perforated)/IMG_5970.JPG" class="img-fluid product-img" alt="Golf Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Golf Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Golf Caps</a></h3>
+                <p class="description">Quick-dry performance fabric with curved brim.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Golf%20Cap%20(Laser%20Perforated)/IMG_5971.JPG" class="img-fluid product-img" alt="Golf Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Golf Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Golf Caps</a></h3>
+                <p class="description">Structured silhouette with clean, minimal logo placement.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Golf%20Cap%20(Laser%20Perforated)/IMG_5972.JPG" class="img-fluid product-img" alt="Golf Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Golf Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Golf Caps</a></h3>
+                <p class="description">Mid-profile crown with moisture-wicking sweatband.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: Trucker Caps ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Trucker Caps</h3>
+        <div class="cat-sep"></div>
+        <p>Iconic foam-front, mesh-back trucker caps - lightweight, airy and endlessly customizable.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Trucker%20Cap/IMG_0423.JPG" class="img-fluid product-img" alt="Trucker Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Trucker Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Trucker Caps</a></h3>
+                <p class="description">Foam front, mesh back, snapback closure - the iconic look.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Trucker%20Cap/IMG_0424.JPG" class="img-fluid product-img" alt="Trucker Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Trucker Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Trucker Caps</a></h3>
+                <p class="description">Washed front panels and retro styling with curved brim.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Trucker%20Cap/IMG_0425.JPG" class="img-fluid product-img" alt="Trucker Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Trucker Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Trucker Caps</a></h3>
+                <p class="description">Tall structured crown with 3D front embroidery.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Trucker%20Cap/IMG_0426.JPG" class="img-fluid product-img" alt="Trucker Caps" loading="lazy" width="1000" height="1000">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Trucker Caps</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Trucker Caps</a></h3>
+                <p class="description">Breathable mesh back, performance fit for events and teams.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: Beanies ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Beanies</h3>
+        <div class="cat-sep"></div>
+        <p>Ribbed knit beanies in every yarn, weight and color - custom embroidery or jacquard.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Beanie/1.jpg" class="img-fluid product-img" alt="Beanies" loading="lazy" width="1118" height="1200">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Beanies</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Beanies</a></h3>
+                <p class="description">Chunky rib knit with folded cuff, jacquard or embroidery logo.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Beanie/2.jpg" class="img-fluid product-img" alt="Beanies" loading="lazy" width="1200" height="1200">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Beanies</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Beanies</a></h3>
+                <p class="description">Medium-weight acrylic blend, custom pom-pom option available.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Beanie/3.jpg" class="img-fluid product-img" alt="Beanies" loading="lazy" width="800" height="1200">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Beanies</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Beanies</a></h3>
+                <p class="description">Relaxed slouch fit, soft-touch yarn, big front print area.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Beanie/4.jpg" class="img-fluid product-img" alt="Beanies" loading="lazy" width="800" height="1200">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Beanies</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Beanies</a></h3>
+                <p class="description">Warm fleece lining for winter with double-layer cuff.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <!-- ========== Category: Visors ========== -->
+      <div class="product-category" data-aos="fade-up">
+        <h3>Visors</h3>
+        <div class="cat-sep"></div>
+        <p>Athletic and casual visors for sports teams, events and summer promotions.</p>
+      </div>
+      <div class="row">
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Visor/O1CN015hfnei1T3MLIi6BWR_!!2220683082326-0-cib.jpg" class="img-fluid product-img" alt="Visors" loading="lazy" width="800" height="800">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Visors</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Visors</a></h3>
+                <p class="description">Terry sweatband, adjustable strap, team ready.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Visor/O1CN01d5bud229Mn294eaCk_!!2221549248054-0-cib.jpg" class="img-fluid product-img" alt="Visors" loading="lazy" width="800" height="800">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Visors</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Visors</a></h3>
+                <p class="description">Lightweight quick-dry fabric with UV protection.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Visor/O1CN01esx9Q629Mn27uILkM_!!2221549248054-0-cib.jpg" class="img-fluid product-img" alt="Visors" loading="lazy" width="800" height="800">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Visors</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Visors</a></h3>
+                <p class="description">Custom embroidery on a curved visor profile.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="course-item w-100">
+              <img src="assets/img/products/Visor/O1CN01fijA2Y1T3MLJ9LqGD_!!2220683082326-0-cib.jpg" class="img-fluid product-img" alt="Visors" loading="lazy" width="800" height="800">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"><p class="category">Visors</p><p class="price">MOQ 50</p></div>
+                <h3><a href="#contact">Visors</a></h3>
+                <p class="description">Event and giveaway favorite, printed or embroidered.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center"><i class="bi bi-palette me-2" style="color: var(--accent-color);"></i><a href="#contact" class="trainer-link">Free Mockup</a></div>
+                  <div class="trainer-rank d-flex align-items-center"><i class="bi bi-clock-history"></i>&nbsp;15d</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      </div>
+    </section><!-- /Products -->
+    <!-- ================================
+         HOW WE WORK
+         Template member cards reused as a 4-step process flow. Photos come
+         from assets/img/Production process/ and assets/img/Packing & Shipping/.
+         ================================ -->
+    <section id="how-we-work" class="section how-we-work">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>How We Work</h2>
+        <p>From Design To Delivery In 4 Steps</p>
+      </div>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member w-100">
+              <img src="assets/img/Production%20process/1.jpg" class="img-fluid" alt="Design and sampling step" loading="lazy" width="1563" height="2086">
+              <div class="member-content">
+                <span class="step-num">STEP 01</span>
+                <h4>Design &amp; Sampling</h4>
+                <p>Send your artwork or idea. We create a free digital mockup, then a physical sample within 7 days for your approval.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="member w-100">
+              <img src="assets/img/Production%20process/6.jpg" class="img-fluid" alt="Bulk production step" loading="lazy" width="1920" height="1300">
+              <div class="member-content">
+                <span class="step-num">STEP 02</span>
+                <h4>Bulk Production</h4>
+                <p>Sample approved? We start mass production with strict material and stitch control. MOQ from 50 pieces.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="member w-100">
+              <img src="assets/img/Production%20process/banner%20(8).jpg" class="img-fluid" alt="Quality inspection step" loading="lazy" width="1920" height="699">
+              <div class="member-content">
+                <span class="step-num">STEP 03</span>
+                <h4>Quality Inspection</h4>
+                <p>Every cap passes in-line and final checks for stitching, logo placement, color accuracy and sizing.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="member w-100">
+              <img src="assets/img/Packing%20%26%20Shipping/7fed6097b7836f0e00c019d18d0160cc.webp" class="img-fluid" alt="Packing and shipping step" loading="lazy" width="800" height="600">
+              <div class="member-content">
+                <span class="step-num">STEP 04</span>
+                <h4>Packing &amp; Shipping</h4>
+                <p>Caps are carefully packed and shipped via DHL, FedEx, UPS or sea freight - typical delivery within 15 days.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /How We Work -->
+    <!-- ================================
+         FACTORY
+         Template layout kept - factory gallery (first 4 factory photos) plus
+         three number cards: 15+ Years | 50M+ Caps | 200+ Brands.
+         ================================ -->
+    <section id="factory" class="section factory-gallery light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Factory</h2>
+        <p>Inside CapSmill&#39;s Production Facility</p>
+      </div>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member w-100">
+              <img src="assets/img/factory/1.webp" class="img-fluid" alt="Cutting workshop in CapSmill factory" loading="lazy" width="800" height="600">
+              <div class="member-content">
+                <span class="step-num">AREA 01</span>
+                <h4>Cutting &amp; Fabric Prep</h4>
+                <p>Precision cutting and fabric preparation lines for every order.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="member w-100">
+              <img src="assets/img/factory/2.webp" class="img-fluid" alt="Embroidery and printing workshop" loading="lazy" width="800" height="600">
+              <div class="member-content">
+                <span class="step-num">AREA 02</span>
+                <h4>Embroidery &amp; Printing</h4>
+                <p>In-house multi-head embroidery and screen printing machines.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="member w-100">
+              <img src="assets/img/factory/4.webp" class="img-fluid" alt="Sewing workshop" loading="lazy" width="800" height="600">
+              <div class="member-content">
+                <span class="step-num">AREA 03</span>
+                <h4>Sewing &amp; Assembly</h4>
+                <p>Skilled operators assemble every cap with consistent quality.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="member w-100">
+              <img src="assets/img/factory/5.webp" class="img-fluid" alt="Quality control and packing" loading="lazy" width="800" height="600">
+              <div class="member-content">
+                <span class="step-num">AREA 04</span>
+                <h4>QC &amp; Packing</h4>
+                <p>Final inspection and careful packing before every shipment.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Factory numbers (three counter cards) -->
+        <div class="row gy-4 mt-2 factory-stats" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p>+ Years Experience</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <p>M+ Caps Produced</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+              <p>+ Brands Served</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Factory -->
+    <!-- ================================
+         REVIEWS (testimonials)
+         Template testimonial carousel reused. The review/ folder contains two
+         screenshots, used below as case evidence; avatars use the Bootstrap
+         Icons user icon (no avatar photos are available in the project).
+         ================================ -->
+    <section id="reviews" class="section testimonials">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Reviews</h2>
+        <p>What Our Clients Say</p>
+      </div>
+
+      <div class="container">
+        <div class="testimonial-wrap position-relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {"loop": true, "speed": 600, "autoplay": {"delay": 5000}, "slidesPerView": 1, "breakpoints": {"768": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}, "pagination": {"el": ".swiper-pagination", "type": "bullets", "clickable": true}}
+            </script>
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>CapSmill took our launch from idea to shelf in under six weeks. The free mockup was so accurate that we approved the sample on the first try. Reordering is effortless.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>Sarah Mitchell</h3>
+                  <h4>Marketing Manager, USA</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>We started with just 50 caps to test the market - no other factory would touch an order that small. Quality on the sample was outstanding and the bulk order matched it perfectly.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>James Walker</h3>
+                  <h4>Brand Founder, United Kingdom</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>Four reorders over two years and every shipment was consistent - same colors, same stitch quality, same fit. That consistency is exactly why we keep coming back.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>Lukas Weber</h3>
+                  <h4>Retail Buyer, Germany</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>The 3D puff embroidery on our beanies came out fantastic. The team patiently walked us through thread colors until every detail was right.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>Olivia Tremblay</h3>
+                  <h4>E-commerce Owner, Canada</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>We needed 3,000 caps for a national promotion in 15 days. They delivered on time, and the inspection photos let us sign off before anything left the factory.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>Jack Thompson</h3>
+                  <h4>Promotions Manager, Australia</h4>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>Clear communication from a real factory, not a trading company. Prices are honest and the 7-day sample service is a huge advantage for our catalog.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>Maria Garcia</h3>
+                  <h4>Apparel Importer, Spain</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>We mixed five different cap styles in a single order and they handled it without a single mix-up. The packing list and QC report made receiving a breeze.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>Daan de Vries</h3>
+                  <h4>Merchandise Lead, Netherlands</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>As a small streetwear label, the MOQ of 50 pieces let us launch three colorways at once. Our snapbacks sold out and we doubled the next order.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>Matteo Rossi</h3>
+                  <h4>Fashion Startup CEO, Italy</h4>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-avatar"><i class="bi bi-person-fill"></i></div>
+                  <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <p><i class="bi bi-quote quote-icon-left"></i>Perfectly embroidered golf caps with laser perforation - players love the breathability. Fast quotes, fast samples, fast shipping.<i class="bi bi-quote quote-icon-right"></i></p>
+                  <h3>Sophie Martin</h3>
+                  <h4>Sports Club Buyer, France</h4>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Reviews -->
+    <!-- ================================
+         FAQ
+         Bootstrap accordion with 8 common questions about MOQ, sampling,
+         production time, mixed orders, customization, payment and design help.
+         ================================ -->
+    <section id="faq" class="section faq light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>FAQ</h2>
+        <p>Frequently Asked Questions</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion" id="faqAccordion">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">What is your minimum order quantity (MOQ)?</button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Our MOQ is only 50 pieces per style per color for most cap types. This low minimum lets startups and small brands test new designs without locking up capital in huge inventory.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Can you make samples before bulk production?</button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Yes. After you approve a free digital mockup, we produce a physical pre-production sample within about 7 days. The sample fee is fully refundable when you place the bulk order.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">How long does bulk production take?</button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Standard bulk production takes about 15 days after sample approval and deposit. Delivery time to your destination then depends on the shipping method you choose.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Can I mix different styles and colors in one order?</button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Absolutely. You can mix styles, colors and decoration techniques in one order. Simply keep at least 50 pieces per style and per color.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">Can you produce my custom logo or design?</button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Yes - that is our specialty. We support embroidery, 3D puff, screen and heat printing, patches, woven and leather labels, laser etching, tags and custom packaging. Send your artwork and we will advise the best technique.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">What payment methods do you accept?</button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">We accept T/T bank transfer, PayPal and Alibaba Trade Assurance. A 30% deposit starts production and the balance is due before shipment.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">Do you provide free samples?</button>
+                </h2>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Every project includes a free digital mockup of your logo on the cap. Physical samples are available at production cost and are refunded with your bulk order.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">Can your team help us with the cap design?</button>
+                </h2>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Yes. Our in-house designers help with logo placement, color matching, tech packs and mockups - so even first-time importers can launch a professional product easily.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /FAQ -->
+    <!-- ================================
+         CONTACT
+         Template contact layout kept. The form posts to Formspree
+         (https://formspree.io/f/mwleodwv) with hidden _next / _subject fields
+         and a hidden _gotcha honeypot to block spam submissions.
+         Fields: Name (required), Email (required), Message (optional).
+         ================================ -->
+    <section id="contact" class="section contact light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Get A Free Quote</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Room 309, Building 8, Future Micro Villa, Lianchi District, Baoding City, Hebei Province, China, 071000</p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Phone / WhatsApp</h3>
+                <p><a href="tel:+8615131222302">+86 151 3122 2302</a></p>
+                <p><a href="https://wa.me/8615131222302" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:admin@capsmill.com">admin@capsmill.com</a></p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-clock-history flex-shrink-0"></i>
+              <div>
+                <h3>Working Hours</h3>
+                <p>Mon - Sat: 9:00 AM - 6:00 PM (GMT+8)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+            <form action="https://formspree.io/f/mwleodwv" method="POST" class="php-email-form">
+              <!-- Hidden Formspree settings + anti-spam honeypot field -->
+              <input type="hidden" name="_next" value="index.html">
+              <input type="hidden" name="_subject" value="New Inquiry from capsmill.com">
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Tell us about your project - cap style, quantity, logo design..."></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="submit">Send Message</button>
+                  <p class="mt-3 mb-0"><em>We usually reply within 24 hours.</em></p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Contact -->
+  </main>
+
+  <!-- ================================
+       FOOTER
+       Brand + contact info + social links (WhatsApp / Email / Website),
+       quick links, cap styles and customization links. Copyright updated to
+       2026 CapSmill. Design credits removed per project requirement.
+       ================================ -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="#hero" class="logo d-flex align-items-center">
+            <img src="assets/img/logo/logo.png" alt="CapSmill logo" width="46" height="46">
+            <span class="sitename">CapSmill</span>
+          </a>
+          <p class="mt-3">Factory-direct OEM &amp; ODM custom headwear manufacturer. Low MOQs, fast sampling and full customization for brands worldwide.</p>
+          <div class="footer-contact pt-3">
+            <p>Room 309, Building 8, Future Micro Villa</p>
+            <p>Lianchi District, Baoding City, Hebei, China 071000</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+86 151 3122 2302</span></p>
+            <p><strong>Email:</strong> <span>admin@capsmill.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://wa.me/8615131222302" target="_blank" rel="noopener" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:admin@capsmill.com" title="Email"><i class="bi bi-envelope"></i></a>
+            <a href="https://capsmill.com" target="_blank" rel="noopener" title="Website"><i class="bi bi-globe"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#how-we-work">How We Work</a></li>
+            <li><a href="#factory">Factory</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Our Cap Styles</h4>
+          <ul>
+            <li><a href="#products">Baseball Caps</a></li>
+            <li><a href="#products">Beanies</a></li>
+            <li><a href="#products">Bucket Hats</a></li>
+            <li><a href="#products">Dad Caps</a></li>
+            <li><a href="#products">Trucker Caps</a></li>
+            <li><a href="#products">Golf Caps</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-links">
+          <h4>Customization</h4>
+          <ul>
+            <li><a href="#customization">Embroidery &amp; 3D Puff</a></li>
+            <li><a href="#customization">Screen &amp; Heat Printing</a></li>
+            <li><a href="#customization">Patches &amp; Labels</a></li>
+            <li><a href="#customization">Laser Etching</a></li>
+            <li><a href="#contact">Get A Free Quote</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>&copy; 2026 <strong class="px-1 sitename">CapSmill</strong>. All Rights Reserved.&nbsp;|&nbsp;<a href="https://capsmill.com">capsmill.com</a></p>
+    </div>
+  </footer>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- ================================
+       SCRIPTS
+       Vendor JS loaded from Cloudflare CDN (the original local assets/vendor/
+       folder is missing from this project). All scripts are placed at the
+       end of the page to avoid render blocking. PureCounter is not hosted
+       on cdnjs, so a small equivalent counter script is inlined below
+       BEFORE main.js (main.js calls new PureCounter() during initialization).
+       ================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+  <!-- Minimal PureCounter replacement (same data-purecounter-* attributes and
+       easing feel as the original plugin) -->
+  <script>
+    window.PureCounter = function () {
+      var items = document.querySelectorAll('[data-purecounter-end]');
+      items.forEach(function (el) {
+        var end = parseFloat(el.getAttribute('data-purecounter-end'));
+        var start = parseFloat(el.getAttribute('data-purecounter-start') || '0');
+        var dur = (parseFloat(el.getAttribute('data-purecounter-duration')) || 1) * 1000;
+        var t0 = null;
+        function tick(now) {
+          if (t0 === null) { t0 = now; }
+          var p = Math.min((now - t0) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(start + (end - start) * eased).toLocaleString('en-US');
+          if (p < 1) { requestAnimationFrame(tick); }
+        }
+        requestAnimationFrame(tick);
+      });
+    };
+  </script>
+
+  <!-- Main JS File (template script - keeps all original behaviour) -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Product filter removed - products are grouped by category -->
+
+  <!-- Safety fallback: never let the preloader block the page -->
+  <script>
+    window.addEventListener('load', function () {
+      var p = document.getElementById('preloader');
+      if (p) { p.remove(); }
+    });
+    setTimeout(function () {
+      var p = document.getElementById('preloader');
+      if (p) { p.remove(); }
+    }, 3000);
+  </script>
+
+</body>
+
+</html>
