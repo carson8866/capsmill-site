@@ -24,25 +24,20 @@
 
   <!-- =====================================================================
        VENDOR CSS - Cloudflare CDN
-       The original template referenced local assets/vendor/ files that are
-       NOT present in this project, so they are replaced with Cloudflare
-       cdnjs links (per project requirement). Google Fonts are removed and a
-       system font stack is used for speed (see custom styles below).
        ===================================================================== -->
 
   <!-- Critical CSS: Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Main CSS file: preloaded (critical render path) -->
+  <!-- Main CSS file: preloaded -->
   <link href="assets/css/main.css" rel="preload" as="style">
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Icon fonts: Bootstrap Icons (primary) + Font Awesome 6 - both loaded
-       normally so every bi-* / fa-* icon renders reliably -->
+  <!-- Icon fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
-  <!-- Deferred non-critical CSS (media="print" + onload switch) -->
+  <!-- Deferred non-critical CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -53,34 +48,24 @@
   </noscript>
 
   <!-- =====================================================================
-       CapSmill custom styles (added on top of the original Mentor template).
-       The template design system (colors, spacing, card styles) is untouched -
-       these rules only support new content and the performance requirements.
+       CapSmill custom styles
        ===================================================================== -->
   <style>
-    /* System font stack - replaces Google Fonts to remove external requests */
+    /* System font stack */
     :root {
       --default-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       --heading-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       --nav-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
-    /* Correct anchor scroll offset for the sticky header */
+    /* Correct anchor scroll offset */
     section, .section { scroll-margin-top: 80px; }
     @media (max-width: 1199px) { section, .section { scroll-margin-top: 66px; } }
 
-    /* Products: uniform square images without distortion (template card look) */
+    /* Products: square images */
     .course-item .product-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 
-    /* ==========================================
-       Logo (CapSmill)
-       logo.png is now a transparent-background PNG
-       (the original white-background file is saved
-       as logo.original-backup.png) so it is used
-       directly - no blend mode required. Aspect
-       ratio stays 1:1 (width auto). No background,
-       radius, padding or shadow is applied.
-       ========================================== */
+    /* Logo */
     .header .logo img {
       max-height: 50px;
       width: auto;
@@ -102,21 +87,14 @@
       margin-right: 8px;
     }
     @media (max-width: 991px) {
-      /* keep the logo visible on tablets - slightly smaller */
       .header .logo img { max-height: 44px; }
     }
     @media (max-width: 575px) {
-      /* keep the logo visible on phones - slightly smaller */
       .header .logo img { max-height: 40px; }
       .header .logo h1 { font-size: 24px; }
     }
 
-    /* ==========================================
-       Product categories (grouped, no filter)
-       Each category gets a clear centered title,
-       an accent separator line and its own row of
-       product cards.
-       ========================================== */
+    /* Product categories */
     .product-category { margin-top: 55px; text-align: center; }
     .product-category:first-of-type { margin-top: 5px; }
     .product-category h3 { font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--heading-color); margin: 0 0 10px 0; }
@@ -124,8 +102,7 @@
     .product-category p { max-width: 680px; margin: 0 auto; color: color-mix(in srgb, var(--default-color), transparent 25%); font-size: 15px; }
     .product-category + .row { margin-top: 15px; }
 
-    /* How We Work / Factory: member-card look (template scopes .member
-       styles to .trainers-index, so the same rules are mirrored here) */
+    /* How We Work / Factory */
     .how-we-work .member,
     .factory-gallery .member { background-color: var(--surface-color); border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); text-align: center; margin-bottom: 20px; height: 100%; }
     .how-we-work .member img,
@@ -138,21 +115,18 @@
     .factory-gallery .member p { padding-top: 10px; font-size: 14px; font-style: italic; color: color-mix(in srgb, var(--default-color), transparent 40%); margin-bottom: 0; }
     .step-num { display: block; color: var(--accent-color); font-weight: 700; font-size: 13px; letter-spacing: 2px; margin-bottom: 4px; }
 
-    /* Trust band icons (counts section) */
+    /* Trust band */
     .trust-item i { display: block; font-size: 36px; color: var(--accent-color); margin-bottom: 12px; }
     .trust-item p { margin-top: 8px; }
 
-    /* Testimonial avatar placeholder (Bootstrap Icons user icon) */
+    /* Testimonial avatar */
     .testimonial-avatar { width: 90px; height: 90px; border-radius: 10px; border: 6px solid var(--background-color); background: color-mix(in srgb, var(--accent-color), transparent 90%); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 42px; position: absolute; left: -45px; top: 30px; }
 
-    /* Hero second CTA - outline version of the template hero button */
+    /* Hero second CTA */
     .hero .btn-get-started-outline { font-weight: 500; font-size: 15px; letter-spacing: 1px; display: inline-block; padding: 8px 35px 10px 35px; border-radius: 50px; transition: 0.4s; margin-top: 30px; border: 2px solid var(--default-color); color: var(--default-color); }
     .hero .btn-get-started-outline:hover { background: var(--default-color); color: var(--accent-color); }
 
-    /* Review evidence screenshots */
-
-
-    /* FAQ accordion: Bootstrap look matched to the template card radius */
+    /* FAQ accordion */
     .faq .accordion-item { border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); border-radius: 5px; margin-bottom: 10px; overflow: hidden; }
     .faq .accordion-button { font-weight: 600; color: var(--heading-color); }
     .faq .accordion-button:not(.collapsed) { background: color-mix(in srgb, var(--accent-color), transparent 94%); color: var(--heading-color); box-shadow: none; }
@@ -161,45 +135,26 @@
       .hero .btn-get-started,
       .hero .btn-get-started-outline { display: block; width: 100%; text-align: center; }
     }
-    /* Products: 4 cards per row on desktop - tighten card padding so the
-       smaller columns still look clean */
     @media (min-width: 992px) {
       .courses .course-content { padding: 12px; }
       .courses .course-content h3 { font-size: 17px; }
     }
-    /* ==========================================
-       Section titles - centered (original Mentor
-       template look) - fixes "What Our Clients Say".
-       ========================================== */
     .section-title { text-align: center; }
 
-    /* Customization cards: icon alignment + readable
-       wrapping for long technique names */
     .features .features-item { min-height: 92px; height: 100%; }
     .features .features-item i { font-size: 34px; line-height: 1; padding-right: 14px; flex-shrink: 0; }
     .features .features-item h3 { line-height: 1.35; }
   </style>
 
-  <!-- ========================================================
-  * Template Name: Mentor (customized for CapSmill)
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Updated: Jul 07 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 <body class="index-page">
 
   <!-- ================================
        HEADER / NAVIGATION
-       Menu: Home | About | Products | How We Work | Factory | Reviews | FAQ | Contact
-       Right side: "Get a Quote" button (links to the contact section).
-       Mobile keeps the original hamburger menu.
        ================================ -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <!-- Logo: new CapSmill logo image + brand text (same style as template) -->
       <a href="#hero" class="logo d-flex align-items-center me-auto">
         <img src="assets/img/logo/logo.png" alt="CapSmill logo" width="50" height="50">
         <h1 class="sitename">CapSmill</h1>
@@ -228,8 +183,6 @@
 
     <!-- ================================
          HERO BANNER
-         Image: assets/img/banner/banner.webp (first banner image).
-         Keeps the original template hero layout, height and overlay.
          ================================ -->
     <section id="hero" class="hero section dark-background">
       <img src="assets/img/banner/banner.webp" alt="CapSmill custom caps factory banner" data-aos="fade-in" fetchpriority="high" width="1920" height="1080">
@@ -246,8 +199,6 @@
 
     <!-- ================================
          ABOUT CAPSMILL
-         Two columns - factory image on the left, company text on the right,
-         three key points + "Get A Free Quote" button. Template layout kept.
          ================================ -->
     <section id="about" class="about section">
       <div class="container">
@@ -276,8 +227,6 @@
 
     <!-- ================================
          TRUST BAND (counts)
-         Alibaba Trade Assurance | SGS Inspected Factory | 50M+ Caps Produced |
-         DHL/FedEx/UPS | 15-Day Delivery. Keeps the template counts styling.
          ================================ -->
     <section id="trust" class="section counts light-background">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -323,10 +272,9 @@
         </div>
       </div>
     </section><!-- /Trust Band -->
+
     <!-- ================================
-         WHY CHOOSE CAPSMILL (service highlights)
-         Original template Why-Us layout: green highlight box + 3 icon cards.
-         Content replaced with: Factory-Direct | MOQ 50 Pcs | Free Digital Mockup.
+         WHY CHOOSE CAPSMILL
          ================================ -->
     <section id="why-us" class="section why-us">
       <div class="container">
@@ -377,12 +325,11 @@
         </div>
       </div>
     </section><!-- /Why Us -->
+
     <!-- ================================
          CUSTOMIZATION & DECORATION
-         Original template Features grid (icon cards) repurposed for cap
-         decoration techniques. 8 techniques, template proportions kept.
          ================================ -->
-        <section id="customization" class="section features light-background">
+    <section id="customization" class="section features light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Customization</h2>
         <p>Decoration Techniques We Offer</p>
@@ -396,56 +343,56 @@
               <i class="bi bi-brush" style="color: #5fcf80;"></i>
               <h3><a href="#contact" class="stretched-link">Embroidery &amp; 3D Puff</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div>
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="features-item">
               <i class="bi bi-fire" style="color: #5fcf80;"></i>
               <h3><a href="#contact" class="stretched-link">Screen &amp; Heat Printing</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div>
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="features-item">
               <i class="bi bi-award" style="color: #5fcf80;"></i>
               <h3><a href="#contact" class="stretched-link">PVC &amp; Metal Patches</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div>
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
             <div class="features-item">
               <i class="bi bi-tags" style="color: #5fcf80;"></i>
               <h3><a href="#contact" class="stretched-link">Woven &amp; Leather Labels</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div>
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="features-item">
               <i class="bi bi-lightning-charge" style="color: #5fcf80;"></i>
               <h3><a href="#contact" class="stretched-link">Laser Etching</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div>
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
             <div class="features-item">
               <i class="bi bi-vector-pen" style="color: #5fcf80;"></i>
               <h3><a href="#contact" class="stretched-link">Chain Stitch</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div>
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
             <div class="features-item">
               <i class="bi bi-palette" style="color: #5fcf80;"></i>
               <h3><a href="#contact" class="stretched-link">Full Sublimation</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div>
 
           <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
             <div class="features-item">
               <i class="bi bi-box-seam" style="color: #5fcf80;"></i>
               <h3><a href="#contact" class="stretched-link">Custom Tags &amp; Packaging</a></h3>
             </div>
-          </div><!-- End Feature Item -->
+          </div>
 
         </div>
       </div>
@@ -453,12 +400,6 @@
 
     <!-- ================================
          PRODUCTS
-         The template "Courses" grid is reused for the cap catalog. Products
-         are grouped by category (one block per product folder, in a logical
-         order) - no filter buttons. Each group has a clear title, an accent
-         separator and 4 product cards built from the first 4 photos of the
-         folder. Images are lazy-loaded and cropped to the template square
-         card look.
          ================================ -->
     <section id="products" class="section courses">
       <div class="container section-title" data-aos="fade-up">
@@ -1160,10 +1101,9 @@
 
       </div>
     </section><!-- /Products -->
+
     <!-- ================================
          HOW WE WORK
-         Template member cards reused as a 4-step process flow. Photos come
-         from assets/img/Production process/ and assets/img/Packing & Shipping/.
          ================================ -->
     <section id="how-we-work" class="section how-we-work">
       <div class="container section-title" data-aos="fade-up">
@@ -1220,10 +1160,9 @@
         </div>
       </div>
     </section><!-- /How We Work -->
+
     <!-- ================================
          FACTORY
-         Template layout kept - factory gallery (first 4 factory photos) plus
-         three number cards: 15+ Years | 50M+ Caps | 200+ Brands.
          ================================ -->
     <section id="factory" class="section factory-gallery light-background">
       <div class="container section-title" data-aos="fade-up">
@@ -1279,7 +1218,7 @@
 
         </div>
 
-        <!-- Factory numbers (three counter cards) -->
+        <!-- Factory numbers -->
         <div class="row gy-4 mt-2 factory-stats" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-4 col-md-6">
             <div class="stats-item text-center w-100 h-100">
@@ -1303,11 +1242,9 @@
 
       </div>
     </section><!-- /Factory -->
+
     <!-- ================================
-         REVIEWS (testimonials)
-         Template testimonial carousel reused. The review/ folder contains two
-         screenshots, used below as case evidence; avatars use the Bootstrap
-         Icons user icon (no avatar photos are available in the project).
+         REVIEWS
          ================================ -->
     <section id="reviews" class="section testimonials">
       <div class="container section-title" data-aos="fade-up">
@@ -1419,10 +1356,9 @@
       </div>
 
     </section><!-- /Reviews -->
+
     <!-- ================================
          FAQ
-         Bootstrap accordion with 8 common questions about MOQ, sampling,
-         production time, mixed orders, customization, payment and design help.
          ================================ -->
     <section id="faq" class="section faq light-background">
       <div class="container section-title" data-aos="fade-up">
@@ -1511,12 +1447,10 @@
         </div>
       </div>
     </section><!-- /FAQ -->
+
     <!-- ================================
          CONTACT
-         Template contact layout kept. The form posts to Formspree
-         (https://formspree.io/f/mwleodwv) with hidden _next / _subject fields
-         and a hidden _gotcha honeypot to block spam submissions.
-         Fields: Name (required), Email (required), Message (optional).
+         Updated to use Web3Forms, access_key added, email changed to carson@bdbrim.com
          ================================ -->
     <section id="contact" class="section contact light-background">
       <div class="container section-title" data-aos="fade-up">
@@ -1546,7 +1480,7 @@
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email</h3>
-                <p><a href="mailto:admin@capsmill.com">admin@capsmill.com</a></p>
+                <p><a href="mailto:carson@bdbrim.com">carson@bdbrim.com</a></p>
               </div>
             </div>
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
@@ -1559,10 +1493,10 @@
           </div>
 
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-            <form action="https://formspree.io/f/mwleodwv" method="POST" class="php-email-form">
-              <!-- Hidden Formspree settings + anti-spam honeypot field -->
-              <input type="hidden" name="_next" value="index.html">
-              <input type="hidden" name="_subject" value="New Inquiry from capsmill.com">
+            <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form">
+              <!-- Web3Forms access key -->
+              <input type="hidden" name="access_key" value="11cb60dd-1468-4744-9d7f-9902bc6510a7">
+              <!-- Optional: anti-spam honeypot -->
               <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
               <div class="row gy-4">
                 <div class="col-md-6">
@@ -1589,9 +1523,7 @@
 
   <!-- ================================
        FOOTER
-       Brand + contact info + social links (WhatsApp / Email / Website),
-       quick links, cap styles and customization links. Copyright updated to
-       2026 CapSmill. Design credits removed per project requirement.
+       Email updated to carson@bdbrim.com
        ================================ -->
   <footer id="footer" class="footer position-relative light-background">
     <div class="container footer-top">
@@ -1607,11 +1539,11 @@
             <p>Room 309, Building 8, Future Micro Villa</p>
             <p>Lianchi District, Baoding City, Hebei, China 071000</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+86 151 3122 2302</span></p>
-            <p><strong>Email:</strong> <span>admin@capsmill.com</span></p>
+            <p><strong>Email:</strong> <span>carson@bdbrim.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href="https://wa.me/8615131222302" target="_blank" rel="noopener" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            <a href="mailto:admin@capsmill.com" title="Email"><i class="bi bi-envelope"></i></a>
+            <a href="mailto:carson@bdbrim.com" title="Email"><i class="bi bi-envelope"></i></a>
             <a href="https://capsmill.com" target="_blank" rel="noopener" title="Website"><i class="bi bi-globe"></i></a>
           </div>
         </div>
@@ -1660,6 +1592,7 @@
       <p>&copy; 2026 <strong class="px-1 sitename">CapSmill</strong>. All Rights Reserved.&nbsp;|&nbsp;<a href="https://capsmill.com">capsmill.com</a></p>
     </div>
   </footer>
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -1668,19 +1601,13 @@
 
   <!-- ================================
        SCRIPTS
-       Vendor JS loaded from Cloudflare CDN (the original local assets/vendor/
-       folder is missing from this project). All scripts are placed at the
-       end of the page to avoid render blocking. PureCounter is not hosted
-       on cdnjs, so a small equivalent counter script is inlined below
-       BEFORE main.js (main.js calls new PureCounter() during initialization).
        ================================ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 
-  <!-- Minimal PureCounter replacement (same data-purecounter-* attributes and
-       easing feel as the original plugin) -->
+  <!-- PureCounter replacement -->
   <script>
     window.PureCounter = function () {
       var items = document.querySelectorAll('[data-purecounter-end]');
@@ -1701,12 +1628,10 @@
     };
   </script>
 
-  <!-- Main JS File (template script - keeps all original behaviour) -->
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Product filter removed - products are grouped by category -->
-
-  <!-- Safety fallback: never let the preloader block the page -->
+  <!-- Safety fallback for preloader -->
   <script>
     window.addEventListener('load', function () {
       var p = document.getElementById('preloader');
