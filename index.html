@@ -22,9 +22,6 @@
   <link href="assets/img/logo/logo.png" rel="icon">
   <link href="assets/img/logo/logo.png" rel="apple-touch-icon">
 
-  <!-- Preload Hero Image for LCP -->
-  <link rel="preload" href="assets/img/banner/banner.webp" as="image" fetchpriority="high">
-
   <!-- =====================================================================
        VENDOR CSS - Cloudflare CDN
        ===================================================================== -->
@@ -147,70 +144,6 @@
     .features .features-item { min-height: 92px; height: 100%; }
     .features .features-item i { font-size: 34px; line-height: 1; padding-right: 14px; flex-shrink: 0; }
     .features .features-item h3 { line-height: 1.35; }
-
-    /* ===== CLS & LCP FIXES ===== */
-    /* 导航栏固定高度，透明背景 */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 1030;
-      background: transparent;  /* 保持透明 */
-      height: 70px;
-      min-height: 70px;
-      box-shadow: none;
-    }
-    @media (max-width: 991px) {
-      .header { height: 66px; min-height: 66px; }
-    }
-
-    /* Logo 容器最小高度 */
-    .logo {
-      display: flex;
-      align-items: center;
-      min-height: 50px;
-    }
-
-    /* Hero 容器保证图片加载前占位 */
-    #hero {
-      position: relative;
-      overflow: hidden;
-      min-height: 60vh;
-    }
-    #hero > img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1920 / 1080;
-      object-fit: cover;
-      background: #f0f2f5;
-    }
-    .hero .container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      padding: 0 15px;
-      z-index: 2;
-      text-align: center;
-      color: #fff;
-    }
-    /* 确保覆盖层 */
-    .hero .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 1;
-    }
-
-    /* 其他图片占位（已有，但确保） */
-    #about .about-images img,
-    .how-we-work .member img,
-    .factory-gallery .member img,
-    .course-item .product-img {
-      display: block;
-      background: #f0f2f5;
-    }
   </style>
 
 </head>
@@ -1663,8 +1596,11 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
   <!-- ================================
-       SCRIPTS (移除 preloader 相关代码)
+       SCRIPTS
        ================================ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -1694,6 +1630,18 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Safety fallback for preloader -->
+  <script>
+    window.addEventListener('load', function () {
+      var p = document.getElementById('preloader');
+      if (p) { p.remove(); }
+    });
+    setTimeout(function () {
+      var p = document.getElementById('preloader');
+      if (p) { p.remove(); }
+    }, 3000);
+  </script>
 
 </body>
 
