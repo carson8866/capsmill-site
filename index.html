@@ -47,6 +47,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" rel="stylesheet">
   </noscript>
 
+  <!-- Preload Hero Image for LCP -->
+  <link rel="preload" href="assets/img/banner/banner.webp" as="image" fetchpriority="high">
+
   <!-- =====================================================================
        CapSmill custom styles
        ===================================================================== -->
@@ -144,6 +147,46 @@
     .features .features-item { min-height: 92px; height: 100%; }
     .features .features-item i { font-size: 34px; line-height: 1; padding-right: 14px; flex-shrink: 0; }
     .features .features-item h3 { line-height: 1.35; }
+
+    /* ===== CLS & LCP FIXES (保持导航栏透明，不改变布局) ===== */
+    /* 导航栏：仅增加最小高度，稳定布局 */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+      background: transparent;  /* 保持透明 */
+      min-height: 70px;         /* 固定最小高度，防止标题偏移 */
+      box-shadow: none;
+    }
+    @media (max-width: 991px) {
+      .header { min-height: 66px; }
+    }
+
+    /* 所有图片占位，防止偏移 */
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      background: #f0f2f5;  /* 加载时浅色背景 */
+    }
+
+    /* Hero 图片强制比例 */
+    #hero > img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1920 / 1080;
+      object-fit: cover;
+    }
+
+    /* About 图片比例 (800×600 -> 4:3) */
+    #about .col-lg-6 img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    /* 其他图片已由通用 img 规则覆盖，无需重复 */
   </style>
 
 </head>
@@ -1596,11 +1639,8 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
   <!-- ================================
-       SCRIPTS
+       SCRIPTS (无 preloader 相关代码)
        ================================ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -1630,18 +1670,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- Safety fallback for preloader -->
-  <script>
-    window.addEventListener('load', function () {
-      var p = document.getElementById('preloader');
-      if (p) { p.remove(); }
-    });
-    setTimeout(function () {
-      var p = document.getElementById('preloader');
-      if (p) { p.remove(); }
-    }, 3000);
-  </script>
 
 </body>
 
