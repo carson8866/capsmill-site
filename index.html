@@ -10,7 +10,7 @@
   <meta name="author" content="CapSmill">
   <link rel="canonical" href="https://capsmill.com/">
 
-  <!-- Open Graph -->
+  <!-- Open Graph for social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CapSmill">
   <meta property="og:title" content="CapSmill - Custom Caps Manufacturer | OEM &amp; ODM Hat Factory">
@@ -18,17 +18,21 @@
   <meta property="og:url" content="https://capsmill.com/">
   <meta property="og:image" content="https://capsmill.com/assets/img/banner/banner.webp">
 
-  <!-- Favicons -->
+  <!-- Favicons (new CapSmill logo) -->
   <link href="assets/img/logo/logo.png" rel="icon">
   <link href="assets/img/logo/logo.png" rel="apple-touch-icon">
 
   <!-- Preload Hero Image for LCP -->
   <link rel="preload" href="assets/img/banner/banner.webp" as="image" fetchpriority="high">
 
+  <!-- =====================================================================
+       VENDOR CSS - Cloudflare CDN
+       ===================================================================== -->
+
   <!-- Critical CSS: Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Main CSS -->
+  <!-- Main CSS file: preloaded -->
   <link href="assets/css/main.css" rel="preload" as="style">
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -47,7 +51,7 @@
   </noscript>
 
   <!-- =====================================================================
-       CapSmill custom styles + CLS & LCP fixes
+       CapSmill custom styles
        ===================================================================== -->
   <style>
     /* System font stack */
@@ -57,30 +61,14 @@
       --nav-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
-    /* Fix scroll margin */
+    /* Correct anchor scroll offset */
     section, .section { scroll-margin-top: 80px; }
     @media (max-width: 1199px) { section, .section { scroll-margin-top: 66px; } }
 
-    /* ===== CLS FIX: Fixed header height ===== */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 1030;
-      background: var(--background-color, #fff);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      height: 70px;          /* 固定高度，防止布局偏移 */
-      min-height: 70px;
-    }
-    @media (max-width: 991px) {
-      .header { height: 66px; min-height: 66px; }
-    }
+    /* Products: square images */
+    .course-item .product-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 
-    /* ===== CLS FIX: Logo container stability ===== */
-    .logo {
-      display: flex;
-      align-items: center;
-      min-height: 50px;      /* 预留空间 */
-    }
+    /* Logo */
     .header .logo img {
       max-height: 50px;
       width: auto;
@@ -90,34 +78,112 @@
       padding: 0;
       box-shadow: none;
       margin-right: 10px;
-      display: block;        /* 避免inline引起的偏移 */
     }
-    .header .logo h1 {
-      font-size: 26px;
-      line-height: 1.2;
-      margin: 0;
-      white-space: nowrap;
+    .footer .footer-about .logo img {
+      max-height: 46px;
+      width: auto;
+      height: auto;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      margin-right: 8px;
+    }
+    @media (max-width: 991px) {
+      .header .logo img { max-height: 44px; }
     }
     @media (max-width: 575px) {
       .header .logo img { max-height: 40px; }
-      .header .logo h1 { font-size: 22px; }
+      .header .logo h1 { font-size: 24px; }
     }
 
-    /* ===== CLS FIX: Hero image aspect ratio ===== */
+    /* Product categories */
+    .product-category { margin-top: 55px; text-align: center; }
+    .product-category:first-of-type { margin-top: 5px; }
+    .product-category h3 { font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--heading-color); margin: 0 0 10px 0; }
+    .product-category .cat-sep { width: 64px; height: 3px; border-radius: 3px; background: var(--accent-color); margin: 0 auto 12px auto; }
+    .product-category p { max-width: 680px; margin: 0 auto; color: color-mix(in srgb, var(--default-color), transparent 25%); font-size: 15px; }
+    .product-category + .row { margin-top: 15px; }
+
+    /* How We Work / Factory */
+    .how-we-work .member,
+    .factory-gallery .member { background-color: var(--surface-color); border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); text-align: center; margin-bottom: 20px; height: 100%; }
+    .how-we-work .member img,
+    .factory-gallery .member img { margin: -1px -1px 30px -1px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .how-we-work .member-content,
+    .factory-gallery .member-content { padding: 0 20px 30px 20px; }
+    .how-we-work .member h4,
+    .factory-gallery .member h4 { font-weight: 700; margin-bottom: 2px; font-size: 18px; }
+    .how-we-work .member p,
+    .factory-gallery .member p { padding-top: 10px; font-size: 14px; font-style: italic; color: color-mix(in srgb, var(--default-color), transparent 40%); margin-bottom: 0; }
+    .step-num { display: block; color: var(--accent-color); font-weight: 700; font-size: 13px; letter-spacing: 2px; margin-bottom: 4px; }
+
+    /* Trust band */
+    .trust-item i { display: block; font-size: 36px; color: var(--accent-color); margin-bottom: 12px; }
+    .trust-item p { margin-top: 8px; }
+
+    /* Testimonial avatar */
+    .testimonial-avatar { width: 90px; height: 90px; border-radius: 10px; border: 6px solid var(--background-color); background: color-mix(in srgb, var(--accent-color), transparent 90%); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 42px; position: absolute; left: -45px; top: 30px; }
+
+    /* Hero second CTA */
+    .hero .btn-get-started-outline { font-weight: 500; font-size: 15px; letter-spacing: 1px; display: inline-block; padding: 8px 35px 10px 35px; border-radius: 50px; transition: 0.4s; margin-top: 30px; border: 2px solid var(--default-color); color: var(--default-color); }
+    .hero .btn-get-started-outline:hover { background: var(--default-color); color: var(--accent-color); }
+
+    /* FAQ accordion */
+    .faq .accordion-item { border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); border-radius: 5px; margin-bottom: 10px; overflow: hidden; }
+    .faq .accordion-button { font-weight: 600; color: var(--heading-color); }
+    .faq .accordion-button:not(.collapsed) { background: color-mix(in srgb, var(--accent-color), transparent 94%); color: var(--heading-color); box-shadow: none; }
+
+    @media (max-width: 575px) {
+      .hero .btn-get-started,
+      .hero .btn-get-started-outline { display: block; width: 100%; text-align: center; }
+    }
+    @media (min-width: 992px) {
+      .courses .course-content { padding: 12px; }
+      .courses .course-content h3 { font-size: 17px; }
+    }
+    .section-title { text-align: center; }
+
+    .features .features-item { min-height: 92px; height: 100%; }
+    .features .features-item i { font-size: 34px; line-height: 1; padding-right: 14px; flex-shrink: 0; }
+    .features .features-item h3 { line-height: 1.35; }
+
+    /* ===== CLS & LCP FIXES ===== */
+    /* 导航栏固定高度，透明背景 */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+      background: transparent;  /* 保持透明 */
+      height: 70px;
+      min-height: 70px;
+      box-shadow: none;
+    }
+    @media (max-width: 991px) {
+      .header { height: 66px; min-height: 66px; }
+    }
+
+    /* Logo 容器最小高度 */
+    .logo {
+      display: flex;
+      align-items: center;
+      min-height: 50px;
+    }
+
+    /* Hero 容器保证图片加载前占位 */
     #hero {
       position: relative;
       overflow: hidden;
-      min-height: 60vh;      /* 确保容器在图片加载前有高度 */
+      min-height: 60vh;
     }
     #hero > img {
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 1920 / 1080; /* 强制比例，防止图片加载后撑开 */
+      aspect-ratio: 1920 / 1080;
       object-fit: cover;
-      background: #f0f2f5;    /* 加载时的背景色，减少白屏 */
+      background: #f0f2f5;
     }
-    /* 确保容器内容不被图片遮盖 */
     .hero .container {
       position: absolute;
       top: 50%;
@@ -129,105 +195,21 @@
       text-align: center;
       color: #fff;
     }
+    /* 确保覆盖层 */
     .hero .hero-overlay {
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.45);
       z-index: 1;
     }
-    /* 调整按钮间距 */
-    .hero .btn-get-started-outline {
-      border: 2px solid #fff;
-      color: #fff;
-      padding: 8px 35px 10px;
-      border-radius: 50px;
-      transition: 0.3s;
-      display: inline-block;
-    }
-    .hero .btn-get-started-outline:hover {
-      background: #fff;
-      color: #000;
-    }
 
-    /* ===== CLS FIX: About section image ===== */
-    #about .about-images img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      background: #f0f2f5;
-    }
-
-    /* ===== CLS FIX: Product images ===== */
-    .course-item .product-img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
-      background: #f0f2f5;
-    }
-
-    /* ===== CLS FIX: How We Work & Factory images ===== */
+    /* 其他图片占位（已有，但确保） */
+    #about .about-images img,
     .how-we-work .member img,
-    .factory-gallery .member img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
+    .factory-gallery .member img,
+    .course-item .product-img {
       display: block;
       background: #f0f2f5;
-    }
-
-    /* ===== CLS FIX: Footer logo ===== */
-    .footer .footer-about .logo img {
-      max-height: 46px;
-      width: auto;
-      height: auto;
-      background: transparent;
-      border-radius: 0;
-      padding: 0;
-      box-shadow: none;
-      margin-right: 8px;
-      display: block;
-    }
-
-    /* ===== General image safety ===== */
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* ===== Trust band spacing ===== */
-    .trust-item i { display: block; font-size: 36px; color: var(--accent-color); margin-bottom: 12px; }
-    .trust-item p { margin-top: 8px; }
-
-    /* ===== Other existing styles kept unchanged ===== */
-    .testimonial-avatar { width: 90px; height: 90px; border-radius: 10px; border: 6px solid var(--background-color); background: color-mix(in srgb, var(--accent-color), transparent 90%); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 42px; position: absolute; left: -45px; top: 30px; }
-    .faq .accordion-item { border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); border-radius: 5px; margin-bottom: 10px; overflow: hidden; }
-    .faq .accordion-button { font-weight: 600; color: var(--heading-color); }
-    .faq .accordion-button:not(.collapsed) { background: color-mix(in srgb, var(--accent-color), transparent 94%); color: var(--heading-color); box-shadow: none; }
-    .features .features-item { min-height: 92px; height: 100%; }
-    .features .features-item i { font-size: 34px; line-height: 1; padding-right: 14px; flex-shrink: 0; }
-    .features .features-item h3 { line-height: 1.35; }
-    .product-category { margin-top: 55px; text-align: center; }
-    .product-category:first-of-type { margin-top: 5px; }
-    .product-category h3 { font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--heading-color); margin: 0 0 10px 0; }
-    .product-category .cat-sep { width: 64px; height: 3px; border-radius: 3px; background: var(--accent-color); margin: 0 auto 12px auto; }
-    .product-category p { max-width: 680px; margin: 0 auto; color: color-mix(in srgb, var(--default-color), transparent 25%); font-size: 15px; }
-    .product-category + .row { margin-top: 15px; }
-    .section-title { text-align: center; }
-    .how-we-work .member, .factory-gallery .member { background-color: var(--surface-color); border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); text-align: center; margin-bottom: 20px; height: 100%; }
-    .how-we-work .member-content, .factory-gallery .member-content { padding: 0 20px 30px 20px; }
-    .how-we-work .member h4, .factory-gallery .member h4 { font-weight: 700; margin-bottom: 2px; font-size: 18px; }
-    .how-we-work .member p, .factory-gallery .member p { padding-top: 10px; font-size: 14px; font-style: italic; color: color-mix(in srgb, var(--default-color), transparent 40%); margin-bottom: 0; }
-    .step-num { display: block; color: var(--accent-color); font-weight: 700; font-size: 13px; letter-spacing: 2px; margin-bottom: 4px; }
-    @media (max-width: 575px) {
-      .hero .btn-get-started, .hero .btn-get-started-outline { display: block; width: 100%; text-align: center; margin-top: 10px; }
-      .hero .btn-get-started-outline { margin-top: 0; }
-    }
-    @media (min-width: 992px) {
-      .courses .course-content { padding: 12px; }
-      .courses .course-content h3 { font-size: 17px; }
     }
   </style>
 
@@ -271,7 +253,7 @@
          ================================ -->
     <section id="hero" class="hero section dark-background">
       <img src="assets/img/banner/banner.webp" alt="CapSmill custom caps factory banner" data-aos="fade-in" fetchpriority="high" width="1920" height="1080">
-      <div class="hero-overlay"></div>
+
       <div class="container">
         <h2 data-aos="fade-up" data-aos-delay="100">Custom Headwear,<br>Engineered for Your Brand</h2>
         <p data-aos="fade-up" data-aos-delay="200">Factory-Direct&nbsp;|&nbsp;MOQ 50 Pcs&nbsp;|&nbsp;7-Day Sampling&nbsp;|&nbsp;15-Day Delivery</p>
@@ -1535,6 +1517,7 @@
 
     <!-- ================================
          CONTACT
+         Updated to use Web3Forms, access_key added, email changed to carson@bdbrim.com
          ================================ -->
     <section id="contact" class="section contact light-background">
       <div class="container section-title" data-aos="fade-up">
@@ -1578,7 +1561,9 @@
 
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
             <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form">
+              <!-- Web3Forms access key -->
               <input type="hidden" name="access_key" value="11cb60dd-1468-4744-9d7f-9902bc6510a7">
+              <!-- Optional: anti-spam honeypot -->
               <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
               <div class="row gy-4">
                 <div class="col-md-6">
@@ -1605,6 +1590,7 @@
 
   <!-- ================================
        FOOTER
+       Email updated to carson@bdbrim.com
        ================================ -->
   <footer id="footer" class="footer position-relative light-background">
     <div class="container footer-top">
@@ -1677,11 +1663,8 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
   <!-- ================================
-       SCRIPTS
+       SCRIPTS (移除 preloader 相关代码)
        ================================ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -1711,18 +1694,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- Safety fallback for preloader -->
-  <script>
-    window.addEventListener('load', function () {
-      var p = document.getElementById('preloader');
-      if (p) { p.remove(); }
-    });
-    setTimeout(function () {
-      var p = document.getElementById('preloader');
-      if (p) { p.remove(); }
-    }, 3000);
-  </script>
 
 </body>
 
