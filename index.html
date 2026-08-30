@@ -1674,18 +1674,17 @@
 </body>
 
 </html>
-<!-- ===== WhatsApp 浮动按钮 ===== -->
+<!-- ===== WhatsApp 浮动按钮（左下角） ===== -->
 <style>
-  /* 浮动按钮容器 - 固定在右下角 */
   .whatsapp-float {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;                 /* 改为左边 */
     z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #25d366;          /* WhatsApp 绿色 */
+    background-color: #25d366;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -1703,13 +1702,12 @@
     font-size: 36px;
     line-height: 1;
   }
-  /* 小屏设备稍微调小 */
   @media (max-width: 575px) {
     .whatsapp-float {
       width: 50px;
       height: 50px;
       bottom: 20px;
-      right: 20px;
+      left: 20px;              /* 小屏也改左边 */
     }
     .whatsapp-float i {
       font-size: 28px;
@@ -1717,8 +1715,7 @@
   }
 </style>
 
-<!-- 按钮链接 -->
 <a href="https://wa.me/8615131222302" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <i class="bi bi-whatsapp"></i>   <!-- 使用 Bootstrap Icons，你的页面已经加载了 -->
+  <i class="bi bi-whatsapp"></i>
 </a>
 <!-- ===== 结束 ===== -->
