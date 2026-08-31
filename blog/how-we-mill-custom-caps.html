@@ -25,14 +25,21 @@
   <!-- Main CSS File -->
   <link href="https://capsmill.com/assets/css/main.css" rel="stylesheet">
 
-  <!-- 仅保留左侧WhatsApp按钮，覆盖可能存在的右侧按钮 -->
+  <!-- 额外修复：强制显示Logo，遮盖可能隐藏的样式 -->
   <style>
-    /* 移除任何可能存在的右侧悬浮按钮（如果有） */
-    .whatsapp-float-right,
-    .wa-float-right {
+    /* 确保 Logo 图片显示 */
+    .logo-img {
+      display: inline-block !important;
+      height: 40px !important;
+      width: auto !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    /* 移除任何右侧悬浮按钮 */
+    .whatsapp-float-right, .wa-float-right {
       display: none !important;
     }
-    /* 自定义左侧按钮 */
+    /* 左侧 WhatsApp 按钮样式 */
     .whatsapp-float-left {
       position: fixed;
       bottom: 30px;
@@ -43,7 +50,7 @@
       padding: 12px 20px;
       font-size: 16px;
       font-weight: 600;
-      display: flex;
+      display: flex !important;
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -69,17 +76,27 @@
         font-size: 14px;
       }
     }
+    /* 修复页脚在手机端的显示 */
+    .footer .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .footer-bottom .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   </style>
 </head>
 
 <body class="index-page">
 
-  <!-- ======= 页眉（与首页完全一致） ======= -->
+  <!-- ======= 页眉（完全复制首页） ======= -->
   <header id="header" class="header sticky-top">
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
         <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center">
-          <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" class="logo-img" width="40" height="40">
+          <!-- 使用内联样式确保显示 -->
+          <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" style="display:inline-block; height:40px; width:auto; margin-right:8px;">
           <span class="sitename">Capsmill</span>
         </a>
         <div class="d-flex align-items-center">
@@ -106,7 +123,7 @@
 
   <main class="main">
 
-    <!-- ======= 博客文章区 ======= -->
+    <!-- ======= 博客内容 ======= -->
     <section id="blog-post" class="section">
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
@@ -174,14 +191,14 @@
 
   </main>
 
-  <!-- ======= 页脚（与首页完全一致） ======= -->
+  <!-- ======= 页脚（完全复制首页，并增加内联修复） ======= -->
   <footer id="footer" class="footer position-relative">
     <div class="container">
       <div class="row gy-5">
         <div class="col-lg-4">
           <div class="footer-brand">
             <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center mb-3">
-              <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" class="logo-img" width="40" height="40">
+              <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" style="display:inline-block; height:40px; width:auto; margin-right:8px;">
               <span class="sitename">Capsmill</span>
             </a>
             <p class="tagline">Premium custom cap manufacturer – from mill to market.</p>
@@ -238,7 +255,7 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- ======= 仅保留左侧 WhatsApp 浮动按钮 ======= -->
+  <!-- ======= 仅保留左侧 WhatsApp 按钮 ======= -->
   <a href="https://wa.me/8615131222302?text=Hello%20Capsmill%2C%20I%27m%20interested%20in%20your%20custom%20caps." class="whatsapp-float-left" target="_blank" aria-label="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
     <span>Chat with us</span>
