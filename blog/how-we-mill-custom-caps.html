@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>How We Mill Custom Caps for Brands | Full Process Guide (1200+ Words)</title>
+  <title>How We Mill Custom Caps for Brands | Full Process Guide</title>
   <meta name="description" content="In-depth guide on how we mill custom caps for US streetwear brands. Covering CAD grading, fabric fusion, 3D embroidery, and QC standards. Low MOQ accepted.">
 
   <!-- Favicons -->
@@ -25,9 +25,15 @@
   <!-- Main CSS File -->
   <link href="https://capsmill.com/assets/css/main.css" rel="stylesheet">
 
+  <!-- 仅保留左侧WhatsApp按钮，覆盖可能存在的右侧按钮 -->
   <style>
-    /* 确保WhatsApp固定在左下角 */
-    .whatsapp-float {
+    /* 移除任何可能存在的右侧悬浮按钮（如果有） */
+    .whatsapp-float-right,
+    .wa-float-right {
+      display: none !important;
+    }
+    /* 自定义左侧按钮 */
+    .whatsapp-float-left {
       position: fixed;
       bottom: 30px;
       left: 30px;
@@ -45,18 +51,18 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
-    .whatsapp-float:hover {
+    .whatsapp-float-left:hover {
       background-color: #1ebe57;
       color: #fff;
       transform: translateY(-3px);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
-    .whatsapp-float i {
+    .whatsapp-float-left i {
       font-size: 24px;
       margin-right: 8px;
     }
     @media (max-width: 576px) {
-      .whatsapp-float {
+      .whatsapp-float-left {
         bottom: 20px;
         left: 20px;
         padding: 10px 15px;
@@ -68,12 +74,12 @@
 
 <body class="index-page">
 
-  <!-- ======= 页头（与首页完全一致） ======= -->
+  <!-- ======= 页眉（与首页完全一致） ======= -->
   <header id="header" class="header sticky-top">
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
         <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center">
-          <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill Logo" class="logo-img" loading="lazy">
+          <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" class="logo-img" width="40" height="40">
           <span class="sitename">Capsmill</span>
         </a>
         <div class="d-flex align-items-center">
@@ -168,14 +174,14 @@
 
   </main>
 
-  <!-- ======= 页脚（与首页完全一致，并增加手机适配） ======= -->
+  <!-- ======= 页脚（与首页完全一致） ======= -->
   <footer id="footer" class="footer position-relative">
-    <div class="container px-3">
+    <div class="container">
       <div class="row gy-5">
         <div class="col-lg-4">
           <div class="footer-brand">
             <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center mb-3">
-              <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" class="logo-img" loading="lazy">
+              <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" class="logo-img" width="40" height="40">
               <span class="sitename">Capsmill</span>
             </a>
             <p class="tagline">Premium custom cap manufacturer – from mill to market.</p>
@@ -217,7 +223,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container px-3">
+      <div class="container">
         <div class="row">
           <div class="col-12 text-center">
             <div class="footer-bottom-content">
@@ -232,8 +238,8 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- ======= WhatsApp 浮动按钮（固定在左下角，已修改号码） ======= -->
-  <a href="https://wa.me/8615131222302?text=Hello%20Capsmill%2C%20I%27m%20interested%20in%20your%20custom%20caps." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <!-- ======= 仅保留左侧 WhatsApp 浮动按钮 ======= -->
+  <a href="https://wa.me/8615131222302?text=Hello%20Capsmill%2C%20I%27m%20interested%20in%20your%20custom%20caps." class="whatsapp-float-left" target="_blank" aria-label="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
     <span>Chat with us</span>
   </a>
