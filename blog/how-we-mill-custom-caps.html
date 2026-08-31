@@ -6,7 +6,7 @@
   <title>How We Mill Custom Caps for Brands | Full Process Guide</title>
   <meta name="description" content="In-depth guide on how we mill custom caps for US streetwear brands. Covering CAD grading, fabric fusion, 3D embroidery, and QC standards. Low MOQ accepted.">
 
-  <!-- Favicons - 修正为 logo.png -->
+  <!-- Favicons -->
   <link href="https://capsmill.com/assets/img/logo/logo.png" rel="icon">
   <link href="https://capsmill.com/assets/img/logo/logo.png" rel="apple-touch-icon">
 
@@ -26,19 +26,25 @@
   <link href="https://capsmill.com/assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* 确保 Logo 图片强制显示 */
+    /* 强制Logo显示 */
     .logo-img {
       display: inline-block !important;
       height: 40px !important;
       width: auto !important;
-      opacity: 1 !important;
-      visibility: visible !important;
     }
-    /* 移除任何右侧悬浮按钮 */
+    /* 页脚间距修复 - 与首页完全一致 */
+    .footer .container {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+    .footer-bottom {
+      padding: 20px 0;
+    }
+    /* 移除右侧悬浮按钮 */
     .whatsapp-float-right, .wa-float-right {
       display: none !important;
     }
-    /* 左侧 WhatsApp 按钮样式 */
+    /* 左侧 WhatsApp 按钮 */
     .whatsapp-float-left {
       position: fixed;
       bottom: 30px;
@@ -75,27 +81,19 @@
         font-size: 14px;
       }
     }
-    /* 页脚手机适配 */
-    .footer .container {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-    .footer-bottom .container {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
   </style>
 </head>
 
 <body class="index-page">
 
-  <!-- ======= 页眉 ======= -->
+  <!-- ============================================================
+  页眉 - 与首页完全一致
+  ============================================================ -->
   <header id="header" class="header sticky-top">
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
         <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center">
-          <!-- 修正为 logo.png 并强制内联显示 -->
-          <img src="https://capsmill.com/assets/img/logo/logo.png" alt="Capsmill" style="display:inline-block; height:40px; width:auto; margin-right:8px;">
+          <img src="https://capsmill.com/assets/img/logo/logo.png" alt="Capsmill" class="logo-img">
           <span class="sitename">Capsmill</span>
         </a>
         <div class="d-flex align-items-center">
@@ -120,9 +118,11 @@
     </div>
   </header>
 
+  <!-- ============================================================
+  主内容
+  ============================================================ -->
   <main class="main">
 
-    <!-- ======= 博客内容 ======= -->
     <section id="blog-post" class="section">
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
@@ -190,15 +190,16 @@
 
   </main>
 
-  <!-- ======= 页脚 ======= -->
+  <!-- ============================================================
+  页脚 - 与首页完全一致
+  ============================================================ -->
   <footer id="footer" class="footer position-relative">
     <div class="container">
       <div class="row gy-5">
         <div class="col-lg-4">
           <div class="footer-brand">
             <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center mb-3">
-              <!-- 修正为 logo.png -->
-              <img src="https://capsmill.com/assets/img/logo/logo.png" alt="Capsmill" style="display:inline-block; height:40px; width:auto; margin-right:8px;">
+              <img src="https://capsmill.com/assets/img/logo/logo.png" alt="Capsmill" class="logo-img">
               <span class="sitename">Capsmill</span>
             </a>
             <p class="tagline">Premium custom cap manufacturer – from mill to market.</p>
@@ -255,7 +256,9 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- ======= 左侧 WhatsApp 按钮 ======= -->
+  <!-- ============================================================
+  左侧 WhatsApp 浮动按钮（仅此一个）
+  ============================================================ -->
   <a href="https://wa.me/8615131222302?text=Hello%20Capsmill%2C%20I%27m%20interested%20in%20your%20custom%20caps." class="whatsapp-float-left" target="_blank" aria-label="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
     <span>Chat with us</span>
@@ -270,6 +273,7 @@
   <script src="https://capsmill.com/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://capsmill.com/assets/js/main.js"></script>
 
+  <!-- AOS 初始化 -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       if (typeof AOS !== 'undefined') {
