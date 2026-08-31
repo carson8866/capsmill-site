@@ -28,7 +28,7 @@
 
 <body class="index-page">
 
-  <!-- ======= 页头（与首页一致） ======= -->
+  <!-- ======= 页头（与首页完全一致） ======= -->
   <header id="header" class="header sticky-top">
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
@@ -60,11 +60,11 @@
 
   <main class="main">
 
-    <!-- ======= 博客内容区 ======= -->
+    <!-- ======= 博客文章区 ======= -->
     <section id="blog-post" class="section">
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
+          <div class="col-lg-8 col-xl-7 px-3 px-lg-0">
 
             <article style="line-height: 1.9; color: #1a1a1a;">
 
@@ -128,7 +128,7 @@
 
   </main>
 
-  <!-- ======= 页脚（与首页一致） ======= -->
+  <!-- ======= 页脚（与首页完全一致） ======= -->
   <footer id="footer" class="footer position-relative">
     <div class="container">
       <div class="row gy-5">
@@ -200,6 +200,23 @@
   <script src="https://capsmill.com/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="https://capsmill.com/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://capsmill.com/assets/js/main.js"></script>
+
+  <!-- 额外初始化，确保与首页一致 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 初始化 AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 600,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      }
+      // 若页面有 glightbox 可在此初始化
+      // 若页面有 swiper 可在此初始化
+    });
+  </script>
 
 </body>
 </html>
