@@ -6,9 +6,9 @@
   <title>How We Mill Custom Caps for Brands | Full Process Guide</title>
   <meta name="description" content="In-depth guide on how we mill custom caps for US streetwear brands. Covering CAD grading, fabric fusion, 3D embroidery, and QC standards. Low MOQ accepted.">
 
-  <!-- Favicons -->
-  <link href="https://capsmill.com/assets/img/logo.webp" rel="icon">
-  <link href="https://capsmill.com/assets/img/logo.webp" rel="apple-touch-icon">
+  <!-- Favicons - 修正为 logo.png -->
+  <link href="https://capsmill.com/assets/img/logo/logo.png" rel="icon">
+  <link href="https://capsmill.com/assets/img/logo/logo.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -25,9 +25,8 @@
   <!-- Main CSS File -->
   <link href="https://capsmill.com/assets/css/main.css" rel="stylesheet">
 
-  <!-- 额外修复：强制显示Logo，遮盖可能隐藏的样式 -->
   <style>
-    /* 确保 Logo 图片显示 */
+    /* 确保 Logo 图片强制显示 */
     .logo-img {
       display: inline-block !important;
       height: 40px !important;
@@ -76,7 +75,7 @@
         font-size: 14px;
       }
     }
-    /* 修复页脚在手机端的显示 */
+    /* 页脚手机适配 */
     .footer .container {
       padding-left: 15px;
       padding-right: 15px;
@@ -90,13 +89,13 @@
 
 <body class="index-page">
 
-  <!-- ======= 页眉（完全复制首页） ======= -->
+  <!-- ======= 页眉 ======= -->
   <header id="header" class="header sticky-top">
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
         <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center">
-          <!-- 使用内联样式确保显示 -->
-          <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" style="display:inline-block; height:40px; width:auto; margin-right:8px;">
+          <!-- 修正为 logo.png 并强制内联显示 -->
+          <img src="https://capsmill.com/assets/img/logo/logo.png" alt="Capsmill" style="display:inline-block; height:40px; width:auto; margin-right:8px;">
           <span class="sitename">Capsmill</span>
         </a>
         <div class="d-flex align-items-center">
@@ -191,14 +190,15 @@
 
   </main>
 
-  <!-- ======= 页脚（完全复制首页，并增加内联修复） ======= -->
+  <!-- ======= 页脚 ======= -->
   <footer id="footer" class="footer position-relative">
     <div class="container">
       <div class="row gy-5">
         <div class="col-lg-4">
           <div class="footer-brand">
             <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center mb-3">
-              <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" style="display:inline-block; height:40px; width:auto; margin-right:8px;">
+              <!-- 修正为 logo.png -->
+              <img src="https://capsmill.com/assets/img/logo/logo.png" alt="Capsmill" style="display:inline-block; height:40px; width:auto; margin-right:8px;">
               <span class="sitename">Capsmill</span>
             </a>
             <p class="tagline">Premium custom cap manufacturer – from mill to market.</p>
@@ -255,7 +255,7 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- ======= 仅保留左侧 WhatsApp 按钮 ======= -->
+  <!-- ======= 左侧 WhatsApp 按钮 ======= -->
   <a href="https://wa.me/8615131222302?text=Hello%20Capsmill%2C%20I%27m%20interested%20in%20your%20custom%20caps." class="whatsapp-float-left" target="_blank" aria-label="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
     <span>Chat with us</span>
@@ -270,7 +270,6 @@
   <script src="https://capsmill.com/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://capsmill.com/assets/js/main.js"></script>
 
-  <!-- 额外初始化 -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       if (typeof AOS !== 'undefined') {
