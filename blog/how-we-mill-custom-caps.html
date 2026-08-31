@@ -25,26 +25,19 @@
   <!-- Main CSS File -->
   <link href="https://capsmill.com/assets/css/main.css" rel="stylesheet">
 
+  <!-- 仅保留必要覆盖，不干扰页脚 -->
   <style>
-    /* 强制Logo显示 */
+    /* 确保Logo显示 */
     .logo-img {
       display: inline-block !important;
       height: 40px !important;
       width: auto !important;
     }
-    /* 页脚间距修复 - 与首页完全一致 */
-    .footer .container {
-      padding-top: 60px;
-      padding-bottom: 40px;
-    }
-    .footer-bottom {
-      padding: 20px 0;
-    }
-    /* 移除右侧悬浮按钮 */
+    /* 移除右侧可能的悬浮按钮 */
     .whatsapp-float-right, .wa-float-right {
       display: none !important;
     }
-    /* 左侧 WhatsApp 按钮 */
+    /* 左侧WhatsApp按钮 */
     .whatsapp-float-left {
       position: fixed;
       bottom: 30px;
@@ -86,9 +79,7 @@
 
 <body class="index-page">
 
-  <!-- ============================================================
-  页眉 - 与首页完全一致
-  ============================================================ -->
+  <!-- ==================== 页眉（完全复制自首页） ==================== -->
   <header id="header" class="header sticky-top">
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
@@ -118,9 +109,7 @@
     </div>
   </header>
 
-  <!-- ============================================================
-  主内容
-  ============================================================ -->
+  <!-- ==================== 主内容 ==================== -->
   <main class="main">
 
     <section id="blog-post" class="section">
@@ -190,9 +179,7 @@
 
   </main>
 
-  <!-- ============================================================
-  页脚 - 与首页完全一致
-  ============================================================ -->
+  <!-- ==================== 页脚（完全复制自首页） ==================== -->
   <footer id="footer" class="footer position-relative">
     <div class="container">
       <div class="row gy-5">
@@ -256,15 +243,13 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- ============================================================
-  左侧 WhatsApp 浮动按钮（仅此一个）
-  ============================================================ -->
+  <!-- WhatsApp 左侧浮动 -->
   <a href="https://wa.me/8615131222302?text=Hello%20Capsmill%2C%20I%27m%20interested%20in%20your%20custom%20caps." class="whatsapp-float-left" target="_blank" aria-label="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
     <span>Chat with us</span>
   </a>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="https://capsmill.com/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://capsmill.com/assets/vendor/aos/aos.js"></script>
   <script src="https://capsmill.com/assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -273,9 +258,8 @@
   <script src="https://capsmill.com/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://capsmill.com/assets/js/main.js"></script>
 
-  <!-- AOS 初始化 -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       if (typeof AOS !== 'undefined') {
         AOS.init({
           duration: 600,
