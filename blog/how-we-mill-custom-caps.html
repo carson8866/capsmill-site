@@ -24,6 +24,46 @@
 
   <!-- Main CSS File -->
   <link href="https://capsmill.com/assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* 确保WhatsApp固定在左下角 */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 9999;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebe57;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .whatsapp-float i {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+    @media (max-width: 576px) {
+      .whatsapp-float {
+        bottom: 20px;
+        left: 20px;
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -33,7 +73,7 @@
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
         <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center">
-          <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill Logo" class="logo-img">
+          <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill Logo" class="logo-img" loading="lazy">
           <span class="sitename">Capsmill</span>
         </a>
         <div class="d-flex align-items-center">
@@ -128,14 +168,14 @@
 
   </main>
 
-  <!-- ======= 页脚（与首页完全一致） ======= -->
+  <!-- ======= 页脚（与首页完全一致，并增加手机适配） ======= -->
   <footer id="footer" class="footer position-relative">
-    <div class="container">
+    <div class="container px-3">
       <div class="row gy-5">
         <div class="col-lg-4">
           <div class="footer-brand">
             <a href="https://capsmill.com/index.html" class="logo d-flex align-items-center mb-3">
-              <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" class="logo-img">
+              <img src="https://capsmill.com/assets/img/logo.webp" alt="Capsmill" class="logo-img" loading="lazy">
               <span class="sitename">Capsmill</span>
             </a>
             <p class="tagline">Premium custom cap manufacturer – from mill to market.</p>
@@ -177,9 +217,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container">
+      <div class="container px-3">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 text-center">
             <div class="footer-bottom-content">
               <p class="mb-0">© 2026 <span class="sitename">Capsmill</span>. All rights reserved.</p>
             </div>
@@ -192,6 +232,12 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- ======= WhatsApp 浮动按钮（固定在左下角） ======= -->
+  <a href="https://wa.me/60173855562?text=Hello%20Capsmill%2C%20I%27m%20interested%20in%20your%20custom%20caps." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span>Chat with us</span>
+  </a>
+
   <!-- Vendor JS Files -->
   <script src="https://capsmill.com/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://capsmill.com/assets/vendor/aos/aos.js"></script>
@@ -201,10 +247,9 @@
   <script src="https://capsmill.com/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://capsmill.com/assets/js/main.js"></script>
 
-  <!-- 额外初始化，确保与首页一致 -->
+  <!-- 额外初始化 -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // 初始化 AOS
       if (typeof AOS !== 'undefined') {
         AOS.init({
           duration: 600,
@@ -213,8 +258,6 @@
           mirror: false
         });
       }
-      // 若页面有 glightbox 可在此初始化
-      // 若页面有 swiper 可在此初始化
     });
   </script>
 
