@@ -1,5 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /forms/
+Disallow: /assets/
+Disallow: /index.original.html
+Disallow: /starter-page.html
+Disallow: /events.html
+Disallow: /pricing.html
+Disallow: /course-details.html
 
 User-agent: GPTBot
 Allow: /
@@ -15,3 +22,5 @@ Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
+
+Sitemap: https://capsmill.com/sitemap.xml
