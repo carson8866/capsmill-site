@@ -9,16 +9,7 @@
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
-
-  <!-- 博客文章 1 -->
-  <url>
-       <loc>https://capsmill.com/blog/how-we-mill-custom-caps.html</loc>
-       <lastmod>2026-09-05</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.6000</priority>
-  </url>
-
-  <!-- 博客文章 2：高尔夫 -->
+  <!-- 博客文章 1：高尔夫 -->
   <url>
        <loc>https://capsmill.com/blog/how-to-choose-custom-hats-for-golf-tournament.html</loc>
        <lastmod>2026-09-05</lastmod>
@@ -26,7 +17,7 @@
        <priority>0.8000</priority>
   </url>
 
-  <!-- 博客文章 3：棒球帽指南 -->
+  <!-- 博客文章 2：棒球帽指南 -->
   <url>
        <loc>https://capsmill.com/blog/custom-baseball-cap-guide.html</loc>
        <lastmod>2026-09-05</lastmod>
@@ -34,7 +25,7 @@
        <priority>0.8000</priority>
   </url>
 
-  <!-- 博客文章 4：如何选择制造商（新加） -->
+  <!-- 博客文章 3：如何选择制造商（新加） -->
   <url>
        <loc>https://capsmill.com/blog/how-to-choose-custom-baseball-cap-manufacturer.html</loc>
        <lastmod>2026-09-05</lastmod>
