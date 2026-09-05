@@ -1712,69 +1712,25 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
- <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // 找到你的表单（根据你代码里的 class）
-    var form = document.querySelector('form[action*="web3forms"]');
-    if (!form) return;
-    
-    // 记录页面加载时间
-    var startTime = Date.now();
-    
-    form.addEventListener('submit', function(e) {
-      // 如果提交时间小于2秒（2000毫秒），直接拦截
-      if (Date.now() - startTime < 2000) {
-        e.preventDefault();
-       
-      }
+
+  <!-- 防垃圾：2秒内提交静默拦截 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 找到你的表单（根据你代码里的 class）
+      var form = document.querySelector('form[action*="web3forms"]');
+      if (!form) return;
+      
+      // 记录页面加载时间
+      var startTime = Date.now();
+      
+      form.addEventListener('submit', function(e) {
+        // 如果提交时间小于2秒（2000毫秒），直接拦截
+        if (Date.now() - startTime < 2000) {
+          e.preventDefault();
+        }
+      });
     });
-  });
   </script>
 </body>
 
 </html>
-<!-- ===== WhatsApp 浮动按钮（左下角） ===== -->
-<style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;                 /* 改为左边 */
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25d366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: #fff !important;
-  }
-  .whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-    color: #fff !important;
-  }
-  .whatsapp-float i {
-    font-size: 36px;
-    line-height: 1;
-  }
-  @media (max-width: 575px) {
-    .whatsapp-float {
-      width: 50px;
-      height: 50px;
-      bottom: 20px;
-      left: 20px;              /* 小屏也改左边 */
-    }
-    .whatsapp-float i {
-      font-size: 28px;
-    }
-  }
-</style>
-
-<a href="https://wa.me/8615131222302" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <i class="bi bi-whatsapp"></i>
-</a>
-<!-- ===== 结束 ===== -->
