@@ -221,12 +221,51 @@
       <p>&copy; 2026 <strong class="px-1 sitename">CapSmill</strong>. All Rights Reserved. | <a href="https://capsmill.com">capsmill.com</a></p>
     </div>
   </footer>
-
-  <!-- 左侧 WhatsApp 按钮 -->
-  <a href="https://wa.me/8615131222302" target="_blank" class="wa-float" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
-
   <!-- 核心 JS（绝对路径） -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/js/main.js"></script>
+  <style>
+  .wa-expert-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* 固定在左下角 */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px; /* 变成胶囊形状 */
+    font-weight: 600;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .wa-expert-float:hover {
+    background-color: #1ebe57;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  .wa-expert-float i {
+    font-size: 24px;
+  }
+  @media (max-width: 576px) {
+    .wa-expert-float {
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+</style>
+
+<a href="https://wa.me/8615131222302?text=Hello%20CapSmill%2C%20I%27m%20interested%20in%20your%20custom%20caps." target="_blank" class="wa-expert-float" aria-label="Ask a Factory Expert">
+  <i class="bi bi-whatsapp"></i> Ask a Factory Expert
+</a>
 </body>
 </html>
