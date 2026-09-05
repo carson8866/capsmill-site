@@ -13,7 +13,7 @@
   <!-- End Google Tag Manager -->
   
   <title>CapSmill - Custom Caps Manufacturer | OEM &amp; ODM Hat Factory</title>
-  <meta name="description" content="CapSmill is a factory-direct custom cap manufacturer in China. OEM &amp; ODM baseball caps, beanies, bucket hats, dad caps, trucker caps, golf caps and more. MOQ 50 pcs, 7-day sampling, 15-day delivery, free digital mockup.">
+  <meta name="description" content="Factory-direct custom cap manufacturer in China. OEM &amp; ODM baseball, bucket, dad, trucker caps &amp; more. MOQ 50 pcs, 7-day sampling, 15-day delivery, free digital mockup.">
   <meta name="keywords" content="custom caps, custom hats, cap manufacturer, OEM caps, ODM hats, baseball cap factory, embroidery caps, trucker caps, beanie manufacturer, cap factory China">
   <meta name="author" content="CapSmill">
   <link rel="canonical" href="https://capsmill.com/">
@@ -58,8 +58,35 @@
   <!-- Preload Hero Image for LCP -->
   <link rel="preload" href="assets/img/banner/banner.webp" as="image" fetchpriority="high">
 
+  <!-- ===== 新增：AI 搜索信任密码 (Organization + WebSite) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CapSmill",
+    "description": "Factory-direct custom cap manufacturer in China.",
+    "url": "https://capsmill.com/",
+    "telephone": "+86 151 3122 2302",
+    "email": "carson@bdbrim.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Baoding",
+      "addressRegion": "Hebei",
+      "addressCountry": "CN"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CapSmill",
+    "url": "https://capsmill.com/"
+  }
+  </script>
+
   <!-- =====================================================================
-       CapSmill custom styles
+       CapSmill custom styles (颜色已严格保留)
        ===================================================================== -->
   <style>
     /* System font stack */
@@ -102,7 +129,8 @@
     }
     @media (max-width: 575px) {
       .header .logo img { max-height: 40px; }
-      .header .logo h1 { font-size: 24px; }
+      /* 同步修改为 span 以保持原本的 Logo 字号和颜色样式 */
+      .header .logo span { font-size: 24px; }
     }
 
     /* Product categories */
@@ -183,7 +211,7 @@
       width: 100%;
       height: 100%;
       aspect-ratio: 1920 / 1080;
-      object-fit: auto;
+      object-fit: cover; /* 修改为 cover 以修复移动端显示不完整问题 */
     }
 
     /* About 图片比例 (800×600 -> 4:3) */
@@ -211,7 +239,8 @@
 
       <a href="#hero" class="logo d-flex align-items-center me-auto">
         <img src="assets/img/logo/logo.png" alt="CapSmill logo" width="50" height="50">
-        <h1 class="sitename">CapSmill</h1>
+        <!-- 第一步修改：h1 改为 span，保持原有样式 -->
+        <span class="sitename">CapSmill</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -243,7 +272,8 @@
       <img src="assets/img/banner/banner.webp" alt="CapSmill custom caps factory banner" data-aos="fade-in" fetchpriority="high" width="1920" height="1080">
 
       <div class="container">
-        <h2 data-aos="fade-up" data-aos-delay="100">Custom Headwear,<br>Engineered for Your Brand</h2>
+        <!-- 第一步修改：h2 改为 h1，让页面只有一个主H1，解决Bing报错 -->
+        <h1 data-aos="fade-up" data-aos-delay="100">Custom Headwear,<br>Engineered for Your Brand</h1>
         <p data-aos="fade-up" data-aos-delay="200">Factory-Direct&nbsp;|&nbsp;MOQ 50 Pcs&nbsp;|&nbsp;7-Day Sampling&nbsp;|&nbsp;15-Day Delivery</p>
         <div class="d-flex flex-wrap mt-4 gap-3" data-aos="fade-up" data-aos-delay="300">
           <a href="#products" class="btn-get-started">Explore Our Products</a>
