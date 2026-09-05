@@ -31,7 +31,8 @@
       background: transparent !important;
       border-radius: 0;
     }
-    .header .logo h1, .footer .sitename {
+    /* 修改：适配降级的 span 保持原字号和样式 */
+    .header .logo span, .footer .sitename {
       font-size: 24px !important;
     }
     .header .logo {
@@ -51,7 +52,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="/index.html" class="logo d-flex align-items-center me-auto">
         <img src="/assets/img/logo/logo.png" alt="CapSmill logo" width="50" height="50">
-        <h1 class="sitename">CapSmill</h1>
+        <!-- 修复：H1 改为 span，解决多个 H1 问题，保持原样式 -->
+        <span class="sitename">CapSmill</span>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -72,6 +74,7 @@
     <section class="section" style="padding-top: 120px;">
       <div class="container">
         <div class="text-center mb-5">
+          <!-- 保留唯一的页面主 H1 -->
           <h1>CapSmill Blog</h1>
           <p class="text-muted">Custom Hat Manufacturing Insights & Tips</p>
         </div>
