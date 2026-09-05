@@ -25,6 +25,24 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="/assets/css/main.css" rel="stylesheet">
 
+  <!-- ⬇️ 修复Logo变形和绿色背景的关键样式 -->
+  <style>
+    .header .logo img, .footer .logo img {
+      max-height: 50px !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+      background: transparent !important;
+      border-radius: 0;
+    }
+    .header .logo h1, .footer .sitename {
+      font-size: 24px !important;
+    }
+    .header .logo {
+      gap: 10px;
+    }
+  </style>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KWCMP87L');</script>
 </head>
